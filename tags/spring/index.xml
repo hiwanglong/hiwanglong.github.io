@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>spring on Stella</title>
+    <link>https://hiwanglong.github.io/tags/spring/</link>
+    <description>Recent content in spring on Stella</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 11 Oct 2019 14:54:46 +0800</lastBuildDate>
+    
+	<atom:link href="https://hiwanglong.github.io/tags/spring/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Spring RestTemplate Part2</title>
+      <link>https://hiwanglong.github.io/2019/10/spring-resttemplate-part2/</link>
+      <pubDate>Fri, 11 Oct 2019 14:54:46 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/10/spring-resttemplate-part2/</guid>
+      <description>&lt;p&gt;Example for Spring RestTemplate GET/POST/PUT/DELETE&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring RestTemplate Part1</title>
+      <link>https://hiwanglong.github.io/2019/10/spring-resttemplate-part1/</link>
+      <pubDate>Fri, 11 Oct 2019 14:36:42 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/10/spring-resttemplate-part1/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#1-%E6%89%A9%E5%B1%95-resttemplate-get-%E6%96%B9%E6%B3%95%EF%BC%8C-make-get-with-request-body&#34;&gt;1. 扩展 RestTemplate Get 方法， make GET with Request Body.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#2-resttemplate-%E4%BB%A3%E7%90%86%EF%BC%88proxy%EF%BC%89%E8%AE%BE%E7%BD%AE&#34;&gt;2. RestTemplate 代理（proxy）设置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#3-resttemplate-oauth&#34;&gt;3. RestTemplate OAuth&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#4-%E5%AE%8C%E6%95%B4class-example&#34;&gt;4. 完整Class example&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;
+
+&lt;p&gt;&lt;a id=&#34;1-%E6%89%A9%E5%B1%95-resttemplate-get-%E6%96%B9%E6%B3%95%EF%BC%8C-make-get-with-request-body&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;1-扩展-resttemplate-get-方法-make-get-with-request-body&#34;&gt;1. 扩展 RestTemplate Get 方法， make GET with Request Body.&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;private static final class HttpComponentsClientHttpRequestWithBodyFactory extends HttpComponentsClientHttpRequestFactory
+private static final class HttpGetRequestWithEntity extends HttpEntityEnclosingRequestBase 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;refer1： &lt;a href=&#34;https://cleanprogrammer.net/making-get-request-with-body-using-spring-resttemplate/&#34;&gt;https://cleanprogrammer.net/making-get-request-with-body-using-spring-resttemplate/&lt;/a&gt; &lt;br&gt;
+refer2: &lt;a href=&#34;https://mekaso.rocks/get-requests-with-a-request-body-spring-resttemplate-vs-apache-httpclient&#34;&gt;https://mekaso.rocks/get-requests-with-a-request-body-spring-resttemplate-vs-apache-httpclient&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

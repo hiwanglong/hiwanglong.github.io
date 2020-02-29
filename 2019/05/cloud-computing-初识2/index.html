@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.55.5 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="Stella Wang">
+<meta name="keywords" content="Azure, GCP">
+<meta name="description" content="
+
+
+Migration to Cloud
+Basic to Mirosoft Azure
+Basic to Google cloud platform(GCP)
+
+
+">
+
+
+<meta property="og:description" content="
+
+
+Migration to Cloud
+Basic to Mirosoft Azure
+Basic to Google cloud platform(GCP)
+
+
+">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cloud Computing - 初识2">
+<meta name="twitter:title" content="Cloud Computing - 初识2">
+<meta property="og:url" content="https://hiwanglong.github.io/2019/05/cloud-computing-%E5%88%9D%E8%AF%862/">
+<meta property="twitter:url" content="https://hiwanglong.github.io/2019/05/cloud-computing-%E5%88%9D%E8%AF%862/">
+<meta property="og:site_name" content="Stella">
+<meta property="og:description" content="
+
+
+Migration to Cloud
+Basic to Mirosoft Azure
+Basic to Google cloud platform(GCP)
+
+
+">
+<meta name="twitter:description" content="
+
+
+Migration to Cloud
+Basic to Mirosoft Azure
+Basic to Google cloud platform(GCP)
+
+
+">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2019-05-14T21:39:39">
+  
+  
+    <meta property="article:modified_time" content="2019-05-14T21:39:39">
+  
+  
+  
+    
+      <meta property="article:section" content="Tech">
+    
+      <meta property="article:section" content="Lynda Note">
+    
+  
+  
+    
+      <meta property="article:tag" content="cloud">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=640">
+
+
+    <title>Cloud Computing - 初识2</title>
+
+    <link rel="icon" href="https://hiwanglong.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://hiwanglong.github.io/2019/05/cloud-computing-%E5%88%9D%E8%AF%862/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://hiwanglong.github.io/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://hiwanglong.github.io/">Stella</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://hiwanglong.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://hiwanglong.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Stella Wang</h4>
+        
+          <h5 class="sidebar-profile-bio">桃李春风一杯酒，江湖夜雨十年灯</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      Cloud Computing - 初识2
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-05-14T21:39:39&#43;08:00">
+        
+  May 14, 2019
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://hiwanglong.github.io/categories/tech">Tech</a>, 
+    
+      <a class="category-link" href="https://hiwanglong.github.io/categories/lynda-note">Lynda Note</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <!-- MarkdownTOC -->
+
+<ul>
+<li><a href="#migration-to-cloud">Migration to Cloud</a></li>
+<li><a href="#basic-to-mirosoft-azure">Basic to Mirosoft Azure</a></li>
+<li><a href="#basic-to-google-cloud-platformgcp">Basic to Google cloud platform(GCP)</a></li>
+</ul>
+
+<!-- /MarkdownTOC -->
+
+<p><a id="migration-to-cloud"></a></p>
+
+<h3 id="migration-to-cloud">Migration to Cloud</h3>
+
+<ol>
+<li><p>TCO or ROI ？</p>
+
+<ul>
+<li>Total Cost of Ownership:即总拥有成本，包括产品采购到后期使用、维护的成本。这是一种公司经常采用的技术评价标准。</li>
+<li>Return on investment: 投资回报率,是指通过投资而应返回的价值，即企业从一项投资活动中得到的经济回报。它涵盖了企业的获利目标。利润和投入经营所必备的财产相关，因为管理人员必须通过投资和现有财产获得利润。投资可分为实业投资和金融投资两大类，人们平常所说的金融投资主要是指证券投资</li>
+</ul></li>
+
+<li><p>需要考虑的tech point</p>
+
+<ul>
+<li>Security, <strong>bring in your secuirty specialists to audit your deployment</strong>
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/azure/Azure-CloudSecurity.png" >
+  
+  
+</div>
+</li>
+<li>Compliance</li>
+<li>Scale</li>
+<li>Perforamnce</li>
+<li>Resilency</li>
+</ul></li>
+
+<li><p>需要的人员</p>
+
+<ul>
+<li>cloud architects</li>
+<li>cloud developers</li>
+<li>cloud security engineers</li>
+</ul></li>
+
+<li><p>需要改变的思想</p>
+
+<ul>
+<li>Think Small</li>
+<li>Think Simple</li>
+<li>Budget for mistakes</li>
+<li>Never be afraid to fail</li>
+</ul></li>
+
+<li><p>Cloud Security Planning:</p>
+
+<ul>
+<li>deal with the basic: at least the minimum viable security</li>
+<li>be proactive: able bo monitor, react and anticipate</li>
+<li>provide clarity in security policies, standard, processes, roles and accountabilities</li>
+</ul></li>
+
+<li><p>CloudOps 是什么？</p>
+
+<ul>
+<li>continues operations and continues improvement</li>
+<li>zero downtime (zdt)</li>
+<li>security monitoring is part of cloudOps</li>
+</ul></li>
+
+<li><p>Moving to the cloud means:</p>
+
+<ul>
+<li>creating a scurity approach and technology solution that is appropriate for the applications and data stores</li>
+</ul></li>
+
+<li><p>Cloudops toolsets take into account:</p>
+
+<ul>
+<li>the needs of the applications and data sets that are part of ops</li>
+</ul></li>
+
+<li><p>Operating security means:</p>
+
+<ul>
+<li>being proactive</li>
+</ul></li>
+
+<li><p>useful links:</p>
+
+<ul>
+<li>the dopper: <a href="http://go.clouddp.com/doppler/subscribe">http://go.clouddp.com/doppler/subscribe</a></li>
+<li>infoWorld: <a href="http://wwww.infoworld.com">http://wwww.infoworld.com</a></li>
+<li>searchCloudComputing: <a href="http://searchcloudcomputing.techtarget.com">http://searchcloudcomputing.techtarget.com</a></li>
+</ul></li>
+</ol>
+
+<hr />
+
+<p><a id="basic-to-mirosoft-azure"></a></p>
+
+<h3 id="basic-to-mirosoft-azure">Basic to Mirosoft Azure</h3>
+
+<ol>
+<li><p>Overview
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/azure/Azure-summary.png" >
+  
+  
+</div>
+</p></li>
+
+<li><p>Resource Group
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/azure/Azure-resourcegroup.png" >
+  
+  
+</div>
+
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/azure/Azure-ResouceGrupOverview.png" >
+  
+  
+</div>
+</p></li>
+
+<li><p>Virtual Network</p>
+
+<ul>
+<li>CIDR</li>
+<li>10.1.0.0/16 means 10.1.0.0 to 10.1.255.255, 65536 addresses</li>
+<li>Subnet</li>
+<li>10.1.0.0/24 means 10.1.0.0 to10.1.0.255, 256 addresses</li>
+<li>Microsoft suggest gateway subnet to /26 or /28</li>
+<li>use peerings to connect to Azure Vnets</li>
+<li>5 ip address are used in an Azure subnet
+<br /></li>
+</ul></li>
+
+<li><p>Storage</p>
+
+<ul>
+<li>Container Blob service:
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/azure/Azure-BlobStorage.png" >
+  
+  
+</div>
+</li>
+<li>File service: smb3
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/azure/Azure-FileStorage.png" >
+  
+  
+</div>
+</li>
+<li>the Azure storage exploer app must be download and install locally when bulk upload needed</li>
+</ul></li>
+
+<li><p>VM</p>
+
+<ul>
+<li>On-premise
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/azure/Azure-OnPremisesConnectivity.png" >
+  
+  
+</div>
+</li>
+<li>Cloud solution:
+
+<ul>
+<li>networking</li>
+<li>storage</li>
+<li>workloads
+
+<ul>
+<li>domain controller</li>
+<li>DNS servers</li>
+<li>line of business apps</li>
+<li>remote desktop servies</li>
+</ul></li>
+<li>high availability</li>
+<li>backups</li>
+</ul></li>
+<li>Hybrird implemention:
+
+<ul>
+<li>gateway subnet</li>
+<li>vpn gateway
+
+<ul>
+<li>it is used to connect your vnet or your virtual network in Azure to your on-premise env</li>
+<li>site to site</li>
+<li>point to site: remote user</li>
+</ul></li>
+<li>dedicated vpn appliance</li>
+<li>expressroute: private connection between your network and Azure deployment</li>
+</ul></li>
+</ul></li>
+
+<li><p>Settings:</p>
+
+<ul>
+<li>newtworking</li>
+<li>storage, shape, scale</li>
+<li>security</li>
+<li>avavilablilty set or zone (HA)
+<br /></li>
+</ul></li>
+
+<li><p>Ops:</p>
+
+<ul>
+<li>backup</li>
+<li>DR disaster recovery</li>
+<li>monitor</li>
+</ul></li>
+
+<li><p>Azure active directory: cloud control panel
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/azure/Azure-ActiveDirectory.png" >
+  
+  
+</div>
+</p>
+
+<ul>
+<li>manage users, devices and apps through a single portal</li>
+<li>backbone of IDM(indentity management in Azure)</li>
+<li>users and group:</li>
+<li>connect tool: connect on-premise env to Azure Active Directory</li>
+</ul></li>
+
+<li><p>Backup and DR:</p>
+
+<ul>
+<li>DR:</li>
+<li>RTO: recovery time objective, duration or lenghth of time that business mut be functional after disaster</li>
+<li>RPO: recovery point bjective, maximum amount of data that can be lost after a disaster
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/azure/Azure-RPO&amp;RTO.png" >
+  
+  
+</div>
+</li>
+<li>Backup:
+
+<ul>
+<li>LRS: localy redundant storage, 3 copies of your data within the region</li>
+<li>GRS: geo-redundant storage, data s replicated to another region</li>
+</ul></li>
+</ul></li>
+</ol>
+
+<hr />
+
+<p><a id="basic-to-google-cloud-platformgcp"></a></p>
+
+<h3 id="basic-to-google-cloud-platform-gcp">Basic to Google cloud platform(GCP)</h3>
+
+<ol>
+<li><p>GCP services:
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/gcp/GCP-1overview.png" >
+  
+  
+</div>
+
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/gcp/GCP-2overview.png" >
+  
+  
+</div>
+</p>
+
+<ul>
+<li>Compute
+
+<ul>
+<li>VM</li>
+<li>Container, Docker</li>
+<li>Functions and lambdas</li>
+</ul></li>
+<li>Storage and DB
+
+<ul>
+<li>Files</li>
+<li>Archive storage</li>
+<li>Persistent disks for vms</li>
+<li>data service
+
+<ul>
+<li>noSql</li>
+<li>rdbms</li>
+<li>hadoop and spark</li>
+</ul></li>
+</ul></li>
+<li>Big dta services:
+
+<ul>
+<li>data pipelines</li>
+<li>data warehouses</li>
+<li>data science notbooks</li>
+<li>machine learning</li>
+</ul></li>
+<li>Other services:
+
+<ul>
+<li>identity and security:</li>
+<li>manager and monitor</li>
+<li>developer tools</li>
+</ul></li>
+</ul></li>
+
+<li><p>GCP 卖点</p>
+
+<ul>
+<li>google is the speed demon</li>
+<li>automatic scaling</li>
+<li>dev tools and libs</li>
+<li>通过命令行创建和使用service而不是常看到的UI操作</li>
+</ul></li>
+
+<li><p>Steps to start GCP</p>
+
+<ul>
+<li>setup account</li>
+<li>navigate to google cloud console</li>
+<li>work with localtions</li>
+<li>billings</li>
+<li>use APIs</li>
+<li>IAM</li>
+<li>gcloud, cli for gcloud</li>
+<li>get demo code from git (gcp homwpage -&gt;language)</li>
+<li>卖点 walk-throughs and tutorials，一步一步指导创建service</li>
+<li>卖点 gcp compare aws doc，可以查看Google云和亚马逊云的优劣点比较</li>
+</ul></li>
+
+<li><p>Computing services:</p>
+
+<ul>
+<li>GCS google cloud storage</li>
+<li>GCE google compute engine
+
+<ul>
+<li>vm instance, ssh is transfer by google, you do not need to keep it by chrome</li>
+<li>using cloud launcher to setup an eclipse ide that means to have a browser-based IDE to code in java on a gcs vm</li>
+<li>using gce resource
+
+<ul>
+<li>storage: image, snapshots, os versions</li>
+<li>networking: networks, firewalls, routes</li>
+</ul></li>
+</ul></li>
+<li>GKE google container engine
+
+<ul>
+<li>docker for app virtualization</li>
+<li>kubernets for management : kubectl
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/gcp/GCP-3Container.png" >
+  
+  
+</div>
+</li>
+</ul></li>
+<li>GAE google app engine
+
+<ul>
+<li>for simeple westie, an old product</li>
+</ul></li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/gcp/GCP-4Compute.png" >
+  
+  
+</div>
+</li>
+</ul></li>
+
+<li><p>Cloud storage:</p>
+
+<ul>
+<li>storage JSON api (like swagger)</li>
+<li>db, gql doc-style db</li>
+<li>bigtable is designed to support wide column db, HBase, for logging senarios</li>
+<li>bigquery data warehouse as a service</li>
+<li>bigtable vs big query</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/gcp/GCP-5Storage&amp;DB.png" >
+  
+  
+</div>
+</li>
+</ul></li>
+
+<li><p>Data pipeline: commonly used for loading and storing data to analyze</p>
+
+<ul>
+<li>cloud pub/sub messsaging: asyn, topic-based msg service</li>
+<li>cloud dataproc: hadoop , spark&hellip;</li>
+<li>cloud dataflow: apache beam, big ETL extract, transform and load
+
+<ul>
+<li>it&rsquo;s a pipeline creation service that integrates with the other google cloud products such as
+
+<ul>
+<li>cloud storage for files</li>
+<li>pub/sub for messages</li>
+<li>datastore for docs</li>
+<li>bigtable for log tables</li>
+<li>bigquery for sql ourtput</li>
+</ul></li>
+<li><strong>it&rsquo;s the glue between all the services</strong></li>
+</ul></li>
+<li>google genomics, used in pipelines with bigquery</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/gcp/GCP-6Pipeline.png" >
+  
+  
+</div>
+</li>
+</ul></li>
+
+<li><p>Machine learning and visualization</p>
+
+<ul>
+<li>cloud vision api</li>
+<li>cloud datalab: Ipython stype/ Jupyter stype for data science</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/gcp/GCP-7MT.png" >
+  
+  
+</div>
+</li>
+</ul></li>
+
+<li><p>Netowrking and dev tools:</p>
+
+<ul>
+<li>cloud networking service
+
+<ul>
+<li>network</li>
+<li>external ip : to connect outside GCP</li>
+<li>firewall rules</li>
+<li>routes</li>
+<li>lb</li>
+<li>dnc</li>
+<li>vpn</li>
+<li>cloud routers</li>
+</ul></li>
+<li>stackdriver monitoring: <strong>monitor your workloads</strong>
+
+<ul>
+<li>monitor GCP</li>
+<li>monitor AWS</li>
+</ul></li>
+<li>source code tools: enable private Git hosting on the GCP
+
+<ul>
+<li><a href="https://github.com/GoogleCloudPlatform">https://github.com/GoogleCloudPlatform</a></li>
+</ul></li>
+<li>what neat about this is they&rsquo;re dockerized and so you can just simply run a docker comd and you can get a full configured env for dev</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/gcp/GCP-8Networking.png" >
+  
+  
+</div>
+</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/gcp/GCP-9DevTools.png" >
+  
+  
+</div>
+</li>
+</ul></li>
+
+<li><p>Implementing solutions: how to combine the most commonly used Google Cloud services into buldabe arcitecture for our projects? 各种困惑中ing</p>
+
+<ul>
+<li>reference artcitectures: <strong>cloud.google.com/icons</strong></li>
+<li>DR architecture
+
+<ul>
+<li>GCE</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/gcp/GCP-Archi-DR.png" >
+  
+  
+</div>
+</li>
+</ul></li>
+<li>web/api app architecture
+
+<ul>
+<li>GCE and LB</li>
+<li>GKE/GAE and container mangagement</li>
+<li>Cloud DNS</li>
+<li>Cloud SQL or other DB</li>
+<li>[{&lt; image classes=&ldquo;figure nocaption fig-100&rdquo; src=&ldquo;/images/gcp/GCP-Archi-Web1.png&rdquo; &gt;}}</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/gcp/GCP-Archi-Web2.png" >
+  
+  
+</div>
+</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/gcp/GCP-Archi-Web3.png" >
+  
+  
+</div>
+</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/gcp/GCP-Archi-Web4.png" >
+  
+  
+</div>
+</li>
+</ul></li>
+<li>big data and data warehouse
+
+<ul>
+<li>cloud storage</li>
+<li>bigquery</li>
+<li>cloud dataflow or 3rd ETL</li>
+<li>data studio or 3rd dashboards</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/gcp/GCP-Archi-BigData1.png" >
+  
+  
+</div>
+</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/gcp/GCP-Archi-BigData2.png" >
+  
+  
+</div>
+</li>
+</ul></li>
+<li>internet of things
+
+<ul>
+<li>cloud storage</li>
+<li>cloud pub/sub</li>
+<li>cloud bigtable</li>
+<li>cloud dataflow</li>
+<li>bigquery</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/gcp/GCP-Archi-Internet1.png" >
+  
+  
+</div>
+</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/gcp/GCP-Archi-Internet2.png" >
+  
+  
+</div>
+</li>
+</ul></li>
+<li>bioinformatics
+
+<ul>
+<li>cloud storage and public datasets</li>
+<li>bigquery</li>
+<li>GCE instance or cluster</li>
+<li>dataflow</li>
+<li>datalab notebooks</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/gcp/GCP-Archi-LCM1.png" >
+  
+  
+</div>
+</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/gcp/GCP-Archi-LCM2.png" >
+  
+  
+</div>
+</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/gcp/GCP-Archi-LCM3.png" >
+  
+  
+</div>
+</li>
+</ul></li>
+<li>launch checklist for GCP berore you&rsquo;re going to lanch your project commercially (deploy to production)</li>
+</ul></li>
+</ol>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://hiwanglong.github.io/tags/cloud/">cloud</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hiwanglong.github.io/2019/05/cloud-computing-%E5%88%9D%E8%AF%863-storage/" data-tooltip="Cloud Computing - 初识3 storage">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hiwanglong.github.io/2019/05/cloud-architecture-%E5%88%9D%E8%AF%861/" data-tooltip="Cloud Architecture - 初识1">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://hiwanglong.github.io/2019/05/cloud-computing-%E5%88%9D%E8%AF%862/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://hiwanglong.github.io/2019/05/cloud-computing-%E5%88%9D%E8%AF%862/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://hiwanglong.github.io/2019/05/cloud-computing-%E5%88%9D%E8%AF%862/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2020 Stella Wang. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hiwanglong.github.io/2019/05/cloud-computing-%E5%88%9D%E8%AF%863-storage/" data-tooltip="Cloud Computing - 初识3 storage">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hiwanglong.github.io/2019/05/cloud-architecture-%E5%88%9D%E8%AF%861/" data-tooltip="Cloud Architecture - 初识1">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://hiwanglong.github.io/2019/05/cloud-computing-%E5%88%9D%E8%AF%862/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://hiwanglong.github.io/2019/05/cloud-computing-%E5%88%9D%E8%AF%862/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://hiwanglong.github.io/2019/05/cloud-computing-%E5%88%9D%E8%AF%862/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhiwanglong.github.io%2F2019%2F05%2Fcloud-computing-%25E5%2588%259D%25E8%25AF%25862%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhiwanglong.github.io%2F2019%2F05%2Fcloud-computing-%25E5%2588%259D%25E8%25AF%25862%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhiwanglong.github.io%2F2019%2F05%2Fcloud-computing-%25E5%2588%259D%25E8%25AF%25862%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Stella Wang</h4>
+    
+      <div id="about-card-bio">桃李春风一杯酒，江湖夜雨十年灯</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        SOHO
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/12/linux_pipeline/">
+                <h3 class="media-heading">Linux_Pipeline</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/12/linux_sed/">
+                <h3 class="media-heading">Linux_Sed</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/12/linux_awk/">
+                <h3 class="media-heading">Linux_Awk</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/12/linux_grep/">
+                <h3 class="media-heading">Linux_Grep</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/11/linux1/">
+                <h3 class="media-heading">Linux1</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%AF%B9%E6%95%B0%E6%8D%AE%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%A4%84%E7%90%86/">
+                <h3 class="media-heading">数据分析 - 对数据的基本处理</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/python-webdata/">
+                <h3 class="media-heading">Python - WebData</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/python-files/">
+                <h3 class="media-heading">Python - Files</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-python%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/">
+                <h3 class="media-heading">数据分析 python准备工作</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">python 2
+pip install ipython[notebook] pip install numpy pip install matplotlib pip install seaborn  Python3
+pip3 install numpy pip3 install matplotlib pip3 install seaborn pip3 install --upgrade pip pip3 install jupyter jupyter notebook #启动jupter import numpy as np import pandas as pd import matplotlib.pyplot as plt from pandas import Series,DataFrame import csv import json from lxml.html import parse from urlib2 import urlopen from lxml import objectify from StringIO import StringIO import requests %matplotlib inline '''启用pylab模式，可以看图形效果''' jupyter notebook %pylab inline ipython --pylab  IPython 基本  Tab 自动补齐 变量？ 查看变量通用信息 函数名？ 查看函数docstring 函数名？？ 查看函数源代码 %run xxx.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/spring-resttemplate-part2/">
+                <h3 class="media-heading">Spring RestTemplate Part2</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Example for Spring RestTemplate GET/POST/PUT/DELETE</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         64 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://hiwanglong.github.io/images/cover.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://hiwanglong.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/hiwanglong.github.io\/2019\/05\/cloud-computing-%E5%88%9D%E8%AF%862\/';
+          
+            this.page.identifier = '\/2019\/05\/cloud-computing-%E5%88%9D%E8%AF%862\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'tranquilpeak';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

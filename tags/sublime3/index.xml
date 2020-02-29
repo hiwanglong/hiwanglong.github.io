@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sublime3 on Stella</title>
+    <link>https://hiwanglong.github.io/tags/sublime3/</link>
+    <description>Recent content in sublime3 on Stella</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 May 2019 19:20:43 +0800</lastBuildDate>
+    
+	<atom:link href="https://hiwanglong.github.io/tags/sublime3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SublimeText 简单配置(持续更新中...ing)</title>
+      <link>https://hiwanglong.github.io/2019/05/sublimetext-%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD...ing/</link>
+      <pubDate>Sat, 11 May 2019 19:20:43 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/05/sublimetext-%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD...ing/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

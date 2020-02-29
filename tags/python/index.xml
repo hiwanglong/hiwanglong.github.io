@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on Stella</title>
+    <link>https://hiwanglong.github.io/tags/python/</link>
+    <description>Recent content in python on Stella</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 13 Oct 2019 15:36:21 +0800</lastBuildDate>
+    
+	<atom:link href="https://hiwanglong.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>数据分析 - 对数据的基本处理</title>
+      <link>https://hiwanglong.github.io/2019/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%AF%B9%E6%95%B0%E6%8D%AE%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%A4%84%E7%90%86/</link>
+      <pubDate>Sun, 13 Oct 2019 15:36:21 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%AF%B9%E6%95%B0%E6%8D%AE%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%A4%84%E7%90%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python - WebData</title>
+      <link>https://hiwanglong.github.io/2019/10/python-webdata/</link>
+      <pubDate>Sat, 12 Oct 2019 22:46:18 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/10/python-webdata/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python - Files</title>
+      <link>https://hiwanglong.github.io/2019/10/python-files/</link>
+      <pubDate>Sat, 12 Oct 2019 21:19:46 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/10/python-files/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>数据分析 python准备工作</title>
+      <link>https://hiwanglong.github.io/2019/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-python%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/</link>
+      <pubDate>Sat, 12 Oct 2019 15:36:21 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-python%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/</guid>
+      <description>python 2
+pip install ipython[notebook] pip install numpy pip install matplotlib pip install seaborn  Python3
+pip3 install numpy pip3 install matplotlib pip3 install seaborn pip3 install --upgrade pip pip3 install jupyter jupyter notebook #启动jupter import numpy as np import pandas as pd import matplotlib.pyplot as plt from pandas import Series,DataFrame import csv import json from lxml.html import parse from urlib2 import urlopen from lxml import objectify from StringIO import StringIO import requests %matplotlib inline &#39;&#39;&#39;启用pylab模式，可以看图形效果&#39;&#39;&#39; jupyter notebook %pylab inline ipython --pylab  IPython 基本  Tab 自动补齐 变量？ 查看变量通用信息 函数名？ 查看函数docstring 函数名？？ 查看函数源代码 %run xxx.</description>
+    </item>
+    
+    <item>
+      <title>Python - Date and Time</title>
+      <link>https://hiwanglong.github.io/2019/07/python-date-and-time/</link>
+      <pubDate>Sun, 21 Jul 2019 10:39:36 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/07/python-date-and-time/</guid>
+      <description>&lt;p&gt;-1. Date and Time Example&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python - 面向对象</title>
+      <link>https://hiwanglong.github.io/2019/07/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</link>
+      <pubDate>Mon, 15 Jul 2019 21:31:20 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/07/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#object-oriented-fundamentals&#34;&gt;Object-Oriented Fundamentals&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#requirements&#34;&gt;Requirements&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#use-cases-and-user-stories&#34;&gt;Use Cases and User Stories&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#domain-modeling&#34;&gt;Domain Modeling&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#class-diagrams&#34;&gt;Class Diagrams&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#inheritance-and-composition&#34;&gt;Inheritance and Composition&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#software-development&#34;&gt;Software Development&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python - Algorithms</title>
+      <link>https://hiwanglong.github.io/2019/07/python-algorithms/</link>
+      <pubDate>Tue, 09 Jul 2019 10:01:45 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/07/python-algorithms/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recursion&#34;&gt;Recursion&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sorting-data&#34;&gt;Sorting data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#searching-data&#34;&gt;Searching data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#other-algorithms&#34;&gt;Other Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python getopt模块</title>
+      <link>https://hiwanglong.github.io/2019/04/python-getopt%E6%A8%A1%E5%9D%97/</link>
+      <pubDate>Wed, 10 Apr 2019 21:16:23 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/04/python-getopt%E6%A8%A1%E5%9D%97/</guid>
+      <description>&lt;h3 id=&#34;example-testgetopt-py&#34;&gt;Example: testGetOpt.py&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python - Foundation</title>
+      <link>https://hiwanglong.github.io/2018/07/python-foundation/</link>
+      <pubDate>Mon, 30 Jul 2018 16:22:00 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2018/07/python-foundation/</guid>
+      <description>https://docs.python.org/3/library/index.html
+  -1. print format and f string, use print()
+eg: x=&#39;seven&#39; print(&#39;x is {}&#39;.format(x)) print (&#39;x is {} {}&#39;.format (8,10)) print (&#39;x is {1:&amp;lt;09} {0:&amp;gt;09}&#39;.format (8,10)) a=8 b=10 x= f&#39;seven {b} {a}&#39; print (x)  -2. decimal
+eg: from decimal import * a = Decimal(&#39;.10&#39;) b = Decimal(&#39;.30&#39;) x = a+a+a-b print (x) --&amp;gt;0.00 if no decimal, x is almost 0 but not 0 due to accuracy and precision  -3.</description>
+    </item>
+    
+  </channel>
+</rss>

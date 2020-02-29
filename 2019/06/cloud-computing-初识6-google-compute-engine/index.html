@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.55.5 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="Stella Wang">
+<meta name="keywords" content="GCE, compute">
+<meta name="description" content="
+
+
+Introduction to GCE
+Exploring GCE
+Integrating User Authentication (OAuth 2.0)
+Developing with JS and GCE
+Working with Python and GCE
+Managing Resources with GCE
+
+
+">
+
+
+<meta property="og:description" content="
+
+
+Introduction to GCE
+Exploring GCE
+Integrating User Authentication (OAuth 2.0)
+Developing with JS and GCE
+Working with Python and GCE
+Managing Resources with GCE
+
+
+">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cloud Computing - 初识6 Google Compute Engine">
+<meta name="twitter:title" content="Cloud Computing - 初识6 Google Compute Engine">
+<meta property="og:url" content="https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%866-google-compute-engine/">
+<meta property="twitter:url" content="https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%866-google-compute-engine/">
+<meta property="og:site_name" content="Stella">
+<meta property="og:description" content="
+
+
+Introduction to GCE
+Exploring GCE
+Integrating User Authentication (OAuth 2.0)
+Developing with JS and GCE
+Working with Python and GCE
+Managing Resources with GCE
+
+
+">
+<meta name="twitter:description" content="
+
+
+Introduction to GCE
+Exploring GCE
+Integrating User Authentication (OAuth 2.0)
+Developing with JS and GCE
+Working with Python and GCE
+Managing Resources with GCE
+
+
+">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2019-06-06T08:38:08">
+  
+  
+    <meta property="article:modified_time" content="2019-06-06T08:38:08">
+  
+  
+  
+    
+      <meta property="article:section" content="Tech">
+    
+      <meta property="article:section" content="Lynda Note">
+    
+  
+  
+    
+      <meta property="article:tag" content="cloud">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=640">
+
+
+    <title>Cloud Computing - 初识6 Google Compute Engine</title>
+
+    <link rel="icon" href="https://hiwanglong.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%866-google-compute-engine/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://hiwanglong.github.io/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://hiwanglong.github.io/">Stella</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://hiwanglong.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://hiwanglong.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Stella Wang</h4>
+        
+          <h5 class="sidebar-profile-bio">桃李春风一杯酒，江湖夜雨十年灯</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      Cloud Computing - 初识6 Google Compute Engine
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-06-06T08:38:08&#43;08:00">
+        
+  June 6, 2019
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://hiwanglong.github.io/categories/tech">Tech</a>, 
+    
+      <a class="category-link" href="https://hiwanglong.github.io/categories/lynda-note">Lynda Note</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <!-- MarkdownTOC -->
+
+<ul>
+<li><a href="#introduction-to-gce">Introduction to GCE</a></li>
+<li><a href="#exploring-gce">Exploring GCE</a></li>
+<li><a href="#integrating-user-authentication-oauth-20">Integrating User Authentication (OAuth 2.0)</a></li>
+<li><a href="#developing-with-js-and-gce">Developing with JS and GCE</a></li>
+<li><a href="#working-with-python-and-gce">Working with Python and GCE</a></li>
+<li><a href="#managing-resources-with-gce">Managing Resources with GCE</a></li>
+</ul>
+
+<!-- /MarkdownTOC -->
+
+<p>Google Cloud Compute Engine is designed to run large scale computing workloads efficiently,quickly and consitently.</p>
+
+<p><a id="introduction-to-gce"></a></p>
+
+<h3 id="introduction-to-gce">Introduction to GCE</h3>
+
+<ol>
+<li>IaaS</li>
+<li>Primary components:
+
+<ul>
+<li>VM
+
+<ul>
+<li>handle computing tasks as need</li>
+<li>uses other resources:Disk, Network and Image</li>
+<li>all resources are on a given plane: global, regional or zone</li>
+<li>OAuth 2.0
+
+<ul>
+<li>Compute Engine console</li>
+<li>REST</li>
+<li>CMD line interface</li>
+</ul></li>
+</ul></li>
+<li>Network
+
+<ul>
+<li>gloval infra</li>
+<li>static and ephemeral IP</li>
+<li>each vm isolated from the other</li>
+<li>firewalls</li>
+</ul></li>
+<li>Persisitent Disks
+
+<ul>
+<li>handle data storage for connects</li>
+<li>HDD, SDD</li>
+<li>all dta written to disk automatically encrypted</li>
+<li>automatic replication and backup</li>
+</ul></li>
+</ul></li>
+<li>Google Coud UI -&gt; Create project -&gt; APIs -&gt; Compute Engine</li>
+</ol>
+
+<p><a id="exploring-gce"></a></p>
+
+<h3 id="exploring-gce">Exploring GCE</h3>
+
+<ol>
+<li>Setup the Google Cloud SDK</li>
+<li>Create a Compute Engine instance
+
+<ul>
+<li>Compute -&gt; VM instance (image, disk, firewell, ip)</li>
+</ul></li>
+<li>Accessing your project remotely
+
+<ul>
+<li>gcloud auth login</li>
+<li>gcloud config set project {projectID}</li>
+<li>gcloud config list</li>
+<li>set SSH key
+
+<ul>
+<li>Compute -&gt; VM instance -&gt; view gcloud cmd/ user another SSH client / open in browser window</li>
+</ul></li>
+</ul></li>
+<li>Setup a cloud-based web server
+
+<ul>
+<li>open in browser window (login into the vm)</li>
+<li>apt-get update (image update)</li>
+<li>apt-get install apache2</li>
+<li>UI, external IP, click it</li>
+</ul></li>
+</ol>
+
+<p><a id="integrating-user-authentication-oauth-20"></a></p>
+
+<h3 id="integrating-user-authentication-oauth-2-0">Integrating User Authentication (OAuth 2.0)</h3>
+
+<ol>
+<li>AuthvRequest from GCE
+
+<ul>
+<li>workflow:
+
+<ul>
+<li>get credentials (project ID) from console</li>
+<li>get token from Google Authorizaton Server</li>
+<li>send token to API via HTTP header</li>
+<li>refresh token as need</li>
+</ul></li>
+</ul></li>
+<li>Authentication Request to GCE
+
+<ul>
+<li>Client ID and Client secret, sope</li>
+</ul></li>
+<li>Steps:
+
+<ul>
+<li>UI -&gt; APIs &amp; auth -&gt; Credentials -&gt; OAuth -&gt; Web application -&gt; Consent screen -&gt; input vm IP: <a href="http://xxx.xxx.xx.xxx">http://xxx.xxx.xx.xxx</a> -&gt; Generate client ID</li>
+<li>public API access -&gt; Generate key -&gt; input  <a href="http://xxx.xxx.xx.xxx">http://xxx.xxx.xx.xxx</a> -&gt; get SSH key</li>
+<li>gcloud auth login</li>
+<li>gcloud compute instances describe {project name} &ndash; format json</li>
+<li>get devstorage.read_only in response</li>
+<li>UI -&gt; APIs &amp; auth -&gt; Credentials -&gt; OAuth -&gt; Service account -&gt; get sshkey file download</li>
+</ul></li>
+</ol>
+
+<p><a id="developing-with-js-and-gce"></a></p>
+
+<h3 id="developing-with-js-and-gce">Developing with JS and GCE</h3>
+
+<ol>
+<li>Steps:
+
+<ul>
+<li>login vm by click &ldquo;open in browser window&rdquo;</li>
+<li>sudo chmod 777 /var/www</li>
+<li>go to cmd line</li>
+<li>put html file with JS code</li>
+<li>gcloud compute copy-files xxx.htm {projectName:/var/www} &ndash;zone {zoneName}</li>
+<li>visit <a href="http://xxx.xxx.xx.xx/xxx.htm">http://xxx.xxx.xx.xx/xxx.htm</a></li>
+</ul></li>
+<li>通过JS code, 可以实现：
+
+<ul>
+<li>authenticate your app</li>
+<li>display available instances and disks</li>
+<li>create new instances</li>
+<li>remove instances</li>
+<li>insert new disk</li>
+<li>set up an ephemeral IP</li>
+</ul></li>
+</ol>
+
+<p><a id="working-with-python-and-gce"></a></p>
+
+<h3 id="working-with-python-and-gce">Working with Python and GCE</h3>
+
+<ol>
+<li>python 2.7 required</li>
+<li>authorize requests:
+
+<ul>
+<li>- UI -&gt; APIs &amp; auth -&gt; Credentials -&gt; installed app -&gt; get the &ldquo;client ID for native application&rdquo; -&gt; download</li>
+<li>run you python scripts with auth file
+
+<ul>
+<li>pyhon xxx.py</li>
+</ul></li>
+</ul></li>
+<li>通过python code， 可以实现：
+
+<ul>
+<li>display available instances and disk</li>
+<li>insert new disk</li>
+<li>create new vm instance</li>
+<li>&hellip;</li>
+</ul></li>
+</ol>
+
+<p><a id="managing-resources-with-gce"></a></p>
+
+<h3 id="managing-resources-with-gce">Managing Resources with GCE</h3>
+
+<ol>
+<li>Build your project team
+
+<ul>
+<li>add user from UI-&gt;Compute engine -&gt;permission</li>
+<li>add git lab as an instane to control code</li>
+</ul></li>
+<li>Set up an instnace group
+
+<ul>
+<li>add user from UI-&gt;Compute -&gt;Compute engine -&gt;instance group</li>
+<li>based on template</li>
+<li>based on existed intance</li>
+</ul></li>
+<li>Working with Compute Engine metadata
+
+<ul>
+<li>metadata instance level
+
+<ul>
+<li>gcloud config set compute/zone {zone-name}</li>
+<li>gcloud compute instance add-metadata {instance-name} &ndash;metadata role=workder unique-ID=xxx</li>
+<li>gcloud cmopute instance describe {instance-name}</li>
+<li>gcloud compute instance remove-metadata {instance-name} &ndash;key role</li>
+</ul></li>
+<li>metadata project level
+
+<ul>
+<li>gcloud compute project-info add-metadata &ndash;metadata startup-id=xxx</li>
+<li>gcloud compute project-info describe</li>
+<li>gcloud compute project-info add-metadata &ndash;metadata-from-file startup-script=xxx.sh</li>
+<li>gcloud compute project-ifo remove-metadata &ndash;keys startup-script</li>
+</ul></li>
+</ul></li>
+<li>Creating disk snapshots
+
+<ul>
+<li>snapshots are considered global resouces</li>
+<li>steps:
+
+<ul>
+<li>UI -&gt; compute -&gt; compute engine -&gt; snapshots
+
+<ul>
+<li>select the disk you want to snapshot</li>
+</ul></li>
+<li>UI -&gt; compute -&gt; compute engine -&gt; vm
+
+<ul>
+<li>create new vm instance</li>
+<li>go to Disks and click the new disk, source snapshots</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>LBR
+
+<ul>
+<li>Network LBR
+
+<ul>
+<li>focus on vm instane within a signle geographic region</li>
+<li>UI -&gt; compute -&gt; compute engine -&gt; network lbr
+
+<ul>
+<li>decide the region</li>
+<li>forwarding rules: directs traffic to specified target pools</li>
+<li>target rules: a collection of instances, know as an instance group</li>
+<li>health checks</li>
+</ul></li>
+</ul></li>
+<li>HTTP LBR
+
+<ul>
+<li>works with VMs across regions</li>
+<li>UI -&gt; compute -&gt; compute engine -&gt; HTTP lbr
+
+<ul>
+<li>offer global access to you vm
+
+<ul>
+<li>content aware: shift to specific servers for specific types of contents (images, data bases, streaming media)</li>
+<li>limitations: restircted to ports 80 and 8080</li>
+</ul></li>
+<li>incoming trafffic
+
+<ul>
+<li>global forwarding rules:</li>
+</ul></li>
+<li>backend services
+
+<ul>
+<li>content-aware feature, URL-map</li>
+<li>rule for images</li>
+<li>rule for dynamic content</li>
+<li>rule for media server</li>
+<li>&hellip;</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ol>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://hiwanglong.github.io/tags/cloud/">cloud</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%867-azure-fundamentals/" data-tooltip="Cloud Computing - 初识7 Azure Fundamentals">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%865-google-storage-and-data/" data-tooltip="Cloud Computing - 初识5 Google Storage and Data">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%866-google-compute-engine/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%866-google-compute-engine/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%866-google-compute-engine/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2020 Stella Wang. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%867-azure-fundamentals/" data-tooltip="Cloud Computing - 初识7 Azure Fundamentals">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%865-google-storage-and-data/" data-tooltip="Cloud Computing - 初识5 Google Storage and Data">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%866-google-compute-engine/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%866-google-compute-engine/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%866-google-compute-engine/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhiwanglong.github.io%2F2019%2F06%2Fcloud-computing-%25E5%2588%259D%25E8%25AF%25866-google-compute-engine%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhiwanglong.github.io%2F2019%2F06%2Fcloud-computing-%25E5%2588%259D%25E8%25AF%25866-google-compute-engine%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhiwanglong.github.io%2F2019%2F06%2Fcloud-computing-%25E5%2588%259D%25E8%25AF%25866-google-compute-engine%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Stella Wang</h4>
+    
+      <div id="about-card-bio">桃李春风一杯酒，江湖夜雨十年灯</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        SOHO
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/12/linux_pipeline/">
+                <h3 class="media-heading">Linux_Pipeline</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/12/linux_sed/">
+                <h3 class="media-heading">Linux_Sed</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/12/linux_awk/">
+                <h3 class="media-heading">Linux_Awk</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/12/linux_grep/">
+                <h3 class="media-heading">Linux_Grep</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/11/linux1/">
+                <h3 class="media-heading">Linux1</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%AF%B9%E6%95%B0%E6%8D%AE%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%A4%84%E7%90%86/">
+                <h3 class="media-heading">数据分析 - 对数据的基本处理</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/python-webdata/">
+                <h3 class="media-heading">Python - WebData</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/python-files/">
+                <h3 class="media-heading">Python - Files</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-python%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/">
+                <h3 class="media-heading">数据分析 python准备工作</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">python 2
+pip install ipython[notebook] pip install numpy pip install matplotlib pip install seaborn  Python3
+pip3 install numpy pip3 install matplotlib pip3 install seaborn pip3 install --upgrade pip pip3 install jupyter jupyter notebook #启动jupter import numpy as np import pandas as pd import matplotlib.pyplot as plt from pandas import Series,DataFrame import csv import json from lxml.html import parse from urlib2 import urlopen from lxml import objectify from StringIO import StringIO import requests %matplotlib inline '''启用pylab模式，可以看图形效果''' jupyter notebook %pylab inline ipython --pylab  IPython 基本  Tab 自动补齐 变量？ 查看变量通用信息 函数名？ 查看函数docstring 函数名？？ 查看函数源代码 %run xxx.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/spring-resttemplate-part2/">
+                <h3 class="media-heading">Spring RestTemplate Part2</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Example for Spring RestTemplate GET/POST/PUT/DELETE</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         64 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://hiwanglong.github.io/images/cover.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://hiwanglong.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/hiwanglong.github.io\/2019\/06\/cloud-computing-%E5%88%9D%E8%AF%866-google-compute-engine\/';
+          
+            this.page.identifier = '\/2019\/06\/cloud-computing-%E5%88%9D%E8%AF%866-google-compute-engine\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'tranquilpeak';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

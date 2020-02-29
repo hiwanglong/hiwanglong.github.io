@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on Stella</title>
+    <link>https://hiwanglong.github.io/tags/java/</link>
+    <description>Recent content in Java on Stella</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Jun 2019 17:54:55 +0800</lastBuildDate>
+    
+	<atom:link href="https://hiwanglong.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Java - How to read(scanner) file?</title>
+      <link>https://hiwanglong.github.io/2019/06/java-how-to-readscanner-file/</link>
+      <pubDate>Sun, 30 Jun 2019 17:54:55 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/06/java-how-to-readscanner-file/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java Spring OAuth</title>
+      <link>https://hiwanglong.github.io/2019/04/java-spring-oauth/</link>
+      <pubDate>Thu, 11 Apr 2019 12:13:11 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/04/java-spring-oauth/</guid>
+      <description>&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java and Jason</title>
+      <link>https://hiwanglong.github.io/2019/04/java-and-jason/</link>
+      <pubDate>Thu, 11 Apr 2019 10:35:40 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/04/java-and-jason/</guid>
+      <description>&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://fasterxml.github.io/jackson-databind/javadoc/2.2.0/com/fasterxml/jackson/databind/JsonNode.html&#34;&gt;https://fasterxml.github.io/jackson-databind/javadoc/2.2.0/com/fasterxml/jackson/databind/JsonNode.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java Jersey HTTP request</title>
+      <link>https://hiwanglong.github.io/2019/04/java-jersey-http-request/</link>
+      <pubDate>Wed, 10 Apr 2019 21:34:36 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/04/java-jersey-http-request/</guid>
+      <description>&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java Load Config Properties</title>
+      <link>https://hiwanglong.github.io/2019/04/java-load-config-properties/</link>
+      <pubDate>Wed, 10 Apr 2019 21:06:09 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/04/java-load-config-properties/</guid>
+      <description>&lt;h3 id=&#34;class-example&#34;&gt;Class Example&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java Insert SSL certificate</title>
+      <link>https://hiwanglong.github.io/2018/03/java-insert-ssl-certificate/</link>
+      <pubDate>Mon, 26 Mar 2018 18:34:37 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2018/03/java-insert-ssl-certificate/</guid>
+      <description>&lt;h3 id=&#34;class-example&#34;&gt;Class Example&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java 远程连接SSH</title>
+      <link>https://hiwanglong.github.io/2018/03/java-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5ssh/</link>
+      <pubDate>Mon, 26 Mar 2018 18:28:28 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2018/03/java-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5ssh/</guid>
+      <description>&lt;h3 id=&#34;class-example-java-ssh-client&#34;&gt;Class Example-Java SSH Client&lt;/h3&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

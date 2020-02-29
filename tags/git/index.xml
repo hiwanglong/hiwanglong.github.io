@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Stella</title>
+    <link>https://hiwanglong.github.io/tags/git/</link>
+    <description>Recent content in git on Stella</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Sep 2017 16:00:25 +0800</lastBuildDate>
+    
+	<atom:link href="https://hiwanglong.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git - Setting global config</title>
+      <link>https://hiwanglong.github.io/2017/09/git-setting-global-config/</link>
+      <pubDate>Wed, 20 Sep 2017 16:00:25 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2017/09/git-setting-global-config/</guid>
+      <description>&lt;p&gt;Some Git settings are useful to have globally, in your ~/.gitconfig file.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

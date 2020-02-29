@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Auth on Stella</title>
+    <link>https://hiwanglong.github.io/tags/auth/</link>
+    <description>Recent content in Auth on Stella</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Apr 2019 17:12:22 +0800</lastBuildDate>
+    
+	<atom:link href="https://hiwanglong.github.io/tags/auth/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Authentication 认证 vs Authorization 授权 </title>
+      <link>https://hiwanglong.github.io/2019/04/authentication-%E8%AE%A4%E8%AF%81-vs-authorization-%E6%8E%88%E6%9D%83/</link>
+      <pubDate>Sun, 14 Apr 2019 17:12:22 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/04/authentication-%E8%AE%A4%E8%AF%81-vs-authorization-%E6%8E%88%E6%9D%83/</guid>
+      <description>&lt;p&gt;Authentication 认证 &lt;br&gt;
+Authorization 授权 &lt;br&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

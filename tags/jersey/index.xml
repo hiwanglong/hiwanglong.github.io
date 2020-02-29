@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jersey on Stella</title>
+    <link>https://hiwanglong.github.io/tags/jersey/</link>
+    <description>Recent content in Jersey on Stella</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Jun 2019 15:37:39 +0800</lastBuildDate>
+    
+	<atom:link href="https://hiwanglong.github.io/tags/jersey/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to set Proxy by jersey client</title>
+      <link>https://hiwanglong.github.io/2019/06/how-to-set-proxy-by-jersey-client/</link>
+      <pubDate>Fri, 14 Jun 2019 15:37:39 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/06/how-to-set-proxy-by-jersey-client/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AWS on Stella</title>
+    <link>https://hiwanglong.github.io/tags/aws/</link>
+    <description>Recent content in AWS on Stella</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Jul 2019 17:26:59 +0800</lastBuildDate>
+    
+	<atom:link href="https://hiwanglong.github.io/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS Solutions Architect Associate5 - Cert Prep</title>
+      <link>https://hiwanglong.github.io/2019/07/aws-solutions-architect-associate5-cert-prep/</link>
+      <pubDate>Wed, 03 Jul 2019 17:26:59 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/07/aws-solutions-architect-associate5-cert-prep/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#understand-the-exam-goals&#34;&gt;Understand the Exam Goals&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#study-and-pass-the-exam&#34;&gt;Study and Pass the Exam&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#learn-other-ways-to-study&#34;&gt;Learn Other ways to study&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Solutions Architect Associate4 - Implementing and Troubleshooting IaaS Products</title>
+      <link>https://hiwanglong.github.io/2019/07/aws-solutions-architect-associate4-implementing-and-troubleshooting-iaas-products/</link>
+      <pubDate>Mon, 01 Jul 2019 20:20:50 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/07/aws-solutions-architect-associate4-implementing-and-troubleshooting-iaas-products/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#global-infra&#34;&gt;Global Infra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#vpc&#34;&gt;VPC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ec2&#34;&gt;EC2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ami&#34;&gt;AMI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#aws-storage&#34;&gt;AWS Storage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#s3&#34;&gt;S3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Solutions Architect Associate3 - Implementing and Troubleshooting PaaS Products</title>
+      <link>https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate3-implementing-and-troubleshooting-paas-products/</link>
+      <pubDate>Sun, 30 Jun 2019 17:58:05 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate3-implementing-and-troubleshooting-paas-products/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#iam&#34;&gt;IAM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#cloudformation&#34;&gt;CloudFormation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#elastic-beanstalk&#34;&gt;Elastic Beanstalk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#opsworks-&#34;&gt;OpsWorks ???&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#beanstalk-vs-opsworks&#34;&gt;Beanstalk vs OpsWorks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Solutions Architect Associate2 - Data Security</title>
+      <link>https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate2-data-security/</link>
+      <pubDate>Mon, 17 Jun 2019 20:58:57 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate2-data-security/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#design-concepts-for-security&#34;&gt;Design Concepts for Security&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#design-security-with-aws-services&#34;&gt;Design Security with AWS services&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#design-concepts-for-encryption&#34;&gt;Design Concepts for Encryption&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#design-encryption-with-aws-services&#34;&gt;Design Encryption with AWS services&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#security-scenarios-and-tradeoffs&#34;&gt;Security Scenarios and Tradeoffs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#design-for-dr&#34;&gt;Design for DR&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Solutions Architect Associate1 - Design and Implement System</title>
+      <link>https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate1-design-and-implement-system/</link>
+      <pubDate>Sun, 09 Jun 2019 09:32:55 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate1-design-and-implement-system/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#aws-serverless-service-desigin&#34;&gt;AWS serverless service desigin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#aws-server-based-service-desigin&#34;&gt;AWS server-based service desigin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#aws-code-tools&#34;&gt;AWS code tools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#aws-apps-of-trade-offs&#34;&gt;AWS apps of Trade-offs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#useful-resources&#34;&gt;Useful resources&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

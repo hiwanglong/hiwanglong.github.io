@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lynda Note on Stella</title>
+    <link>https://hiwanglong.github.io/categories/lynda-note/</link>
+    <description>Recent content in Lynda Note on Stella</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Jul 2019 17:26:59 +0800</lastBuildDate>
+    
+	<atom:link href="https://hiwanglong.github.io/categories/lynda-note/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS Solutions Architect Associate5 - Cert Prep</title>
+      <link>https://hiwanglong.github.io/2019/07/aws-solutions-architect-associate5-cert-prep/</link>
+      <pubDate>Wed, 03 Jul 2019 17:26:59 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/07/aws-solutions-architect-associate5-cert-prep/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#understand-the-exam-goals&#34;&gt;Understand the Exam Goals&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#study-and-pass-the-exam&#34;&gt;Study and Pass the Exam&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#learn-other-ways-to-study&#34;&gt;Learn Other ways to study&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Solutions Architect Associate4 - Implementing and Troubleshooting IaaS Products</title>
+      <link>https://hiwanglong.github.io/2019/07/aws-solutions-architect-associate4-implementing-and-troubleshooting-iaas-products/</link>
+      <pubDate>Mon, 01 Jul 2019 20:20:50 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/07/aws-solutions-architect-associate4-implementing-and-troubleshooting-iaas-products/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#global-infra&#34;&gt;Global Infra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#vpc&#34;&gt;VPC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ec2&#34;&gt;EC2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ami&#34;&gt;AMI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#aws-storage&#34;&gt;AWS Storage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#s3&#34;&gt;S3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Solutions Architect Associate3 - Implementing and Troubleshooting PaaS Products</title>
+      <link>https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate3-implementing-and-troubleshooting-paas-products/</link>
+      <pubDate>Sun, 30 Jun 2019 17:58:05 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate3-implementing-and-troubleshooting-paas-products/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#iam&#34;&gt;IAM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#cloudformation&#34;&gt;CloudFormation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#elastic-beanstalk&#34;&gt;Elastic Beanstalk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#opsworks-&#34;&gt;OpsWorks ???&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#beanstalk-vs-opsworks&#34;&gt;Beanstalk vs OpsWorks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Solutions Architect Associate2 - Data Security</title>
+      <link>https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate2-data-security/</link>
+      <pubDate>Mon, 17 Jun 2019 20:58:57 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate2-data-security/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#design-concepts-for-security&#34;&gt;Design Concepts for Security&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#design-security-with-aws-services&#34;&gt;Design Security with AWS services&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#design-concepts-for-encryption&#34;&gt;Design Concepts for Encryption&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#design-encryption-with-aws-services&#34;&gt;Design Encryption with AWS services&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#security-scenarios-and-tradeoffs&#34;&gt;Security Scenarios and Tradeoffs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#design-for-dr&#34;&gt;Design for DR&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Solutions Architect Associate1 - Design and Implement System</title>
+      <link>https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate1-design-and-implement-system/</link>
+      <pubDate>Sun, 09 Jun 2019 09:32:55 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate1-design-and-implement-system/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#aws-serverless-service-desigin&#34;&gt;AWS serverless service desigin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#aws-server-based-service-desigin&#34;&gt;AWS server-based service desigin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#aws-code-tools&#34;&gt;AWS code tools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#aws-apps-of-trade-offs&#34;&gt;AWS apps of Trade-offs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#useful-resources&#34;&gt;Useful resources&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cloud Computing - 初识8 Cloud Career Paths</title>
+      <link>https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%868-cloud-career-paths/</link>
+      <pubDate>Sat, 08 Jun 2019 23:06:14 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%868-cloud-career-paths/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud Computing - 初识7 Azure Fundamentals</title>
+      <link>https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%867-azure-fundamentals/</link>
+      <pubDate>Fri, 07 Jun 2019 16:12:54 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%867-azure-fundamentals/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud Computing - 初识6 Google Compute Engine</title>
+      <link>https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%866-google-compute-engine/</link>
+      <pubDate>Thu, 06 Jun 2019 08:38:08 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%866-google-compute-engine/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction-to-gce&#34;&gt;Introduction to GCE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#exploring-gce&#34;&gt;Exploring GCE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#integrating-user-authentication-oauth-20&#34;&gt;Integrating User Authentication (OAuth 2.0)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#developing-with-js-and-gce&#34;&gt;Developing with JS and GCE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#working-with-python-and-gce&#34;&gt;Working with Python and GCE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#managing-resources-with-gce&#34;&gt;Managing Resources with GCE&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cloud Computing - 初识5 Google Storage and Data</title>
+      <link>https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%865-google-storage-and-data/</link>
+      <pubDate>Mon, 03 Jun 2019 15:02:04 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%865-google-storage-and-data/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#exploring-cloud-storage&#34;&gt;Exploring Cloud Storage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#exploring-cloud-sql&#34;&gt;Exploring Cloud SQL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#exploring-cloud-datastore-%E7%BB%93%E6%9E%84%E5%92%8Celasticsearch%E7%B1%BB%E4%BC%BC&#34;&gt;Exploring Cloud DataStore (结构和Elasticsearch类似)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#exploring-bigquery&#34;&gt;Exploring BigQuery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#manage-storage-and-data-with-python-27&#34;&gt;Manage storage and data with Python (2.7)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cloud Computing - 初识4 cyber security</title>
+      <link>https://hiwanglong.github.io/2019/05/cloud-computing-%E5%88%9D%E8%AF%864-cyber-security/</link>
+      <pubDate>Wed, 29 May 2019 22:26:51 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/05/cloud-computing-%E5%88%9D%E8%AF%864-cyber-security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud Computing - 初识3 storage</title>
+      <link>https://hiwanglong.github.io/2019/05/cloud-computing-%E5%88%9D%E8%AF%863-storage/</link>
+      <pubDate>Thu, 23 May 2019 23:49:14 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/05/cloud-computing-%E5%88%9D%E8%AF%863-storage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud Computing - 初识2</title>
+      <link>https://hiwanglong.github.io/2019/05/cloud-computing-%E5%88%9D%E8%AF%862/</link>
+      <pubDate>Tue, 14 May 2019 21:39:39 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/05/cloud-computing-%E5%88%9D%E8%AF%862/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#migration-to-cloud&#34;&gt;Migration to Cloud&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#basic-to-mirosoft-azure&#34;&gt;Basic to Mirosoft Azure&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#basic-to-google-cloud-platformgcp&#34;&gt;Basic to Google cloud platform(GCP)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cloud Architecture - 初识1</title>
+      <link>https://hiwanglong.github.io/2019/05/cloud-architecture-%E5%88%9D%E8%AF%861/</link>
+      <pubDate>Sun, 12 May 2019 08:26:12 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/05/cloud-architecture-%E5%88%9D%E8%AF%861/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

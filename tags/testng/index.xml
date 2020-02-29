@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TestNg on Stella</title>
+    <link>https://hiwanglong.github.io/tags/testng/</link>
+    <description>Recent content in TestNg on Stella</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Apr 2019 13:43:32 +0800</lastBuildDate>
+    
+	<atom:link href="https://hiwanglong.github.io/tags/testng/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>TestNg - Parameter</title>
+      <link>https://hiwanglong.github.io/2019/04/testng-parameter/</link>
+      <pubDate>Sun, 14 Apr 2019 13:43:32 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/04/testng-parameter/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.cnblogs.com/haigege/p/5450742.html&#34;&gt;https://www.cnblogs.com/haigege/p/5450742.html&lt;/a&gt; &lt;br&gt;
+&lt;a href=&#34;https://www.cnblogs.com/Roger1227/p/3851159.html&#34;&gt;https://www.cnblogs.com/Roger1227/p/3851159.html&lt;/a&gt; &lt;br&gt;
+&lt;a href=&#34;https://testng.org/doc/documentation-main.html#parameters&#34;&gt;https://testng.org/doc/documentation-main.html#parameters&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;-1. @Parameters&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>TestNg - Parallel</title>
+      <link>https://hiwanglong.github.io/2019/04/testng-parallel/</link>
+      <pubDate>Thu, 11 Apr 2019 12:07:53 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/04/testng-parallel/</guid>
+      <description>&lt;h3 id=&#34;转载&#34;&gt;转载&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.importnew.com/14508.html&#34;&gt;http://www.importnew.com/14508.html&lt;/a&gt; &lt;br&gt;
+&lt;a href=&#34;https://www.cnblogs.com/znicy/p/6534893.html&#34;&gt;https://www.cnblogs.com/znicy/p/6534893.html&lt;/a&gt; &lt;br&gt;
+&lt;a href=&#34;https://testng.org/doc/documentation-main.html#parallel-running&#34;&gt;https://testng.org/doc/documentation-main.html#parallel-running&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Testng - DataProvider</title>
+      <link>https://hiwanglong.github.io/2017/12/testng-dataprovider/</link>
+      <pubDate>Mon, 11 Dec 2017 18:31:43 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2017/12/testng-dataprovider/</guid>
+      <description>&lt;p&gt;根据官方文档，DataProvider只能有2种类型的返回&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Object[][]
+Iterator&amp;lt;Object[]&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

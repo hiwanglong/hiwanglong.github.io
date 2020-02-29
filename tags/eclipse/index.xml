@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>eclipse on Stella</title>
+    <link>https://hiwanglong.github.io/tags/eclipse/</link>
+    <description>Recent content in eclipse on Stella</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 26 Jan 2018 13:13:53 +0800</lastBuildDate>
+    
+	<atom:link href="https://hiwanglong.github.io/tags/eclipse/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Java远程调试（Remote Debug)</title>
+      <link>https://hiwanglong.github.io/2018/01/java%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95remote-debug/</link>
+      <pubDate>Fri, 26 Jan 2018 13:13:53 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2018/01/java%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95remote-debug/</guid>
+      <description>&lt;p&gt;以Weblogic+Eclipse为例 &lt;br&gt;
+1. Enalbe remote debug at Weblogic  &lt;br&gt;
+-&amp;gt; Open Weblogic Console Page &lt;br&gt;
+-&amp;gt; Click Environment&lt;br&gt;
+-&amp;gt; Click Servers &lt;br&gt;
+-&amp;gt; Select server which you want debug on &lt;br&gt;
+-&amp;gt; Click server start tab &lt;br&gt;
+-&amp;gt; Add Arguments with&lt;br&gt;
+    agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=9999&lt;br&gt;
+-&amp;gt; Restart the server from Weblogic Console Page(Server -&amp;gt; Control)&lt;br&gt;
+-&amp;gt; If failed to restart, pls run startNodeManager.sh&lt;br&gt;
+-&amp;gt; Start the server by scripts will not work&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
