@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stella</title>
+    <link>https://hiwanglong.github.io/</link>
+    <description>Recent content on Stella</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Dec 2019 10:57:49 +0800</lastBuildDate>
+    
+	<atom:link href="https://hiwanglong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linux_Pipeline</title>
+      <link>https://hiwanglong.github.io/2019/12/linux_pipeline/</link>
+      <pubDate>Mon, 02 Dec 2019 10:57:49 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/12/linux_pipeline/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux_Sed</title>
+      <link>https://hiwanglong.github.io/2019/12/linux_sed/</link>
+      <pubDate>Mon, 02 Dec 2019 10:52:19 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/12/linux_sed/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux_Awk</title>
+      <link>https://hiwanglong.github.io/2019/12/linux_awk/</link>
+      <pubDate>Mon, 02 Dec 2019 10:45:24 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/12/linux_awk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux_Grep</title>
+      <link>https://hiwanglong.github.io/2019/12/linux_grep/</link>
+      <pubDate>Mon, 02 Dec 2019 10:38:45 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/12/linux_grep/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux1</title>
+      <link>https://hiwanglong.github.io/2019/11/linux1/</link>
+      <pubDate>Tue, 19 Nov 2019 22:04:50 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/11/linux1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>数据分析 - 对数据的基本处理</title>
+      <link>https://hiwanglong.github.io/2019/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%AF%B9%E6%95%B0%E6%8D%AE%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%A4%84%E7%90%86/</link>
+      <pubDate>Sun, 13 Oct 2019 15:36:21 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%AF%B9%E6%95%B0%E6%8D%AE%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%A4%84%E7%90%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python - WebData</title>
+      <link>https://hiwanglong.github.io/2019/10/python-webdata/</link>
+      <pubDate>Sat, 12 Oct 2019 22:46:18 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/10/python-webdata/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python - Files</title>
+      <link>https://hiwanglong.github.io/2019/10/python-files/</link>
+      <pubDate>Sat, 12 Oct 2019 21:19:46 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/10/python-files/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>数据分析 python准备工作</title>
+      <link>https://hiwanglong.github.io/2019/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-python%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/</link>
+      <pubDate>Sat, 12 Oct 2019 15:36:21 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-python%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/</guid>
+      <description>python 2
+pip install ipython[notebook] pip install numpy pip install matplotlib pip install seaborn  Python3
+pip3 install numpy pip3 install matplotlib pip3 install seaborn pip3 install --upgrade pip pip3 install jupyter jupyter notebook #启动jupter import numpy as np import pandas as pd import matplotlib.pyplot as plt from pandas import Series,DataFrame import csv import json from lxml.html import parse from urlib2 import urlopen from lxml import objectify from StringIO import StringIO import requests %matplotlib inline &#39;&#39;&#39;启用pylab模式，可以看图形效果&#39;&#39;&#39; jupyter notebook %pylab inline ipython --pylab  IPython 基本  Tab 自动补齐 变量？ 查看变量通用信息 函数名？ 查看函数docstring 函数名？？ 查看函数源代码 %run xxx.</description>
+    </item>
+    
+    <item>
+      <title>Spring RestTemplate Part2</title>
+      <link>https://hiwanglong.github.io/2019/10/spring-resttemplate-part2/</link>
+      <pubDate>Fri, 11 Oct 2019 14:54:46 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/10/spring-resttemplate-part2/</guid>
+      <description>&lt;p&gt;Example for Spring RestTemplate GET/POST/PUT/DELETE&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring RestTemplate Part1</title>
+      <link>https://hiwanglong.github.io/2019/10/spring-resttemplate-part1/</link>
+      <pubDate>Fri, 11 Oct 2019 14:36:42 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/10/spring-resttemplate-part1/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#1-%E6%89%A9%E5%B1%95-resttemplate-get-%E6%96%B9%E6%B3%95%EF%BC%8C-make-get-with-request-body&#34;&gt;1. 扩展 RestTemplate Get 方法， make GET with Request Body.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#2-resttemplate-%E4%BB%A3%E7%90%86%EF%BC%88proxy%EF%BC%89%E8%AE%BE%E7%BD%AE&#34;&gt;2. RestTemplate 代理（proxy）设置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#3-resttemplate-oauth&#34;&gt;3. RestTemplate OAuth&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#4-%E5%AE%8C%E6%95%B4class-example&#34;&gt;4. 完整Class example&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;
+
+&lt;p&gt;&lt;a id=&#34;1-%E6%89%A9%E5%B1%95-resttemplate-get-%E6%96%B9%E6%B3%95%EF%BC%8C-make-get-with-request-body&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;1-扩展-resttemplate-get-方法-make-get-with-request-body&#34;&gt;1. 扩展 RestTemplate Get 方法， make GET with Request Body.&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;private static final class HttpComponentsClientHttpRequestWithBodyFactory extends HttpComponentsClientHttpRequestFactory
+private static final class HttpGetRequestWithEntity extends HttpEntityEnclosingRequestBase 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;refer1： &lt;a href=&#34;https://cleanprogrammer.net/making-get-request-with-body-using-spring-resttemplate/&#34;&gt;https://cleanprogrammer.net/making-get-request-with-body-using-spring-resttemplate/&lt;/a&gt; &lt;br&gt;
+refer2: &lt;a href=&#34;https://mekaso.rocks/get-requests-with-a-request-body-spring-resttemplate-vs-apache-httpclient&#34;&gt;https://mekaso.rocks/get-requests-with-a-request-body-spring-resttemplate-vs-apache-httpclient&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python - Date and Time</title>
+      <link>https://hiwanglong.github.io/2019/07/python-date-and-time/</link>
+      <pubDate>Sun, 21 Jul 2019 10:39:36 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/07/python-date-and-time/</guid>
+      <description>&lt;p&gt;-1. Date and Time Example&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python - 面向对象</title>
+      <link>https://hiwanglong.github.io/2019/07/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</link>
+      <pubDate>Mon, 15 Jul 2019 21:31:20 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/07/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#object-oriented-fundamentals&#34;&gt;Object-Oriented Fundamentals&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#requirements&#34;&gt;Requirements&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#use-cases-and-user-stories&#34;&gt;Use Cases and User Stories&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#domain-modeling&#34;&gt;Domain Modeling&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#class-diagrams&#34;&gt;Class Diagrams&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#inheritance-and-composition&#34;&gt;Inheritance and Composition&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#software-development&#34;&gt;Software Development&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python - Algorithms</title>
+      <link>https://hiwanglong.github.io/2019/07/python-algorithms/</link>
+      <pubDate>Tue, 09 Jul 2019 10:01:45 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/07/python-algorithms/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recursion&#34;&gt;Recursion&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sorting-data&#34;&gt;Sorting data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#searching-data&#34;&gt;Searching data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#other-algorithms&#34;&gt;Other Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Solutions Architect Associate5 - Cert Prep</title>
+      <link>https://hiwanglong.github.io/2019/07/aws-solutions-architect-associate5-cert-prep/</link>
+      <pubDate>Wed, 03 Jul 2019 17:26:59 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/07/aws-solutions-architect-associate5-cert-prep/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#understand-the-exam-goals&#34;&gt;Understand the Exam Goals&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#study-and-pass-the-exam&#34;&gt;Study and Pass the Exam&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#learn-other-ways-to-study&#34;&gt;Learn Other ways to study&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Solutions Architect Associate4 - Implementing and Troubleshooting IaaS Products</title>
+      <link>https://hiwanglong.github.io/2019/07/aws-solutions-architect-associate4-implementing-and-troubleshooting-iaas-products/</link>
+      <pubDate>Mon, 01 Jul 2019 20:20:50 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/07/aws-solutions-architect-associate4-implementing-and-troubleshooting-iaas-products/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#global-infra&#34;&gt;Global Infra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#vpc&#34;&gt;VPC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ec2&#34;&gt;EC2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ami&#34;&gt;AMI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#aws-storage&#34;&gt;AWS Storage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#s3&#34;&gt;S3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Solutions Architect Associate3 - Implementing and Troubleshooting PaaS Products</title>
+      <link>https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate3-implementing-and-troubleshooting-paas-products/</link>
+      <pubDate>Sun, 30 Jun 2019 17:58:05 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate3-implementing-and-troubleshooting-paas-products/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#iam&#34;&gt;IAM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#cloudformation&#34;&gt;CloudFormation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#elastic-beanstalk&#34;&gt;Elastic Beanstalk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#opsworks-&#34;&gt;OpsWorks ???&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#beanstalk-vs-opsworks&#34;&gt;Beanstalk vs OpsWorks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java - How to read(scanner) file?</title>
+      <link>https://hiwanglong.github.io/2019/06/java-how-to-readscanner-file/</link>
+      <pubDate>Sun, 30 Jun 2019 17:54:55 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/06/java-how-to-readscanner-file/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS Solutions Architect Associate2 - Data Security</title>
+      <link>https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate2-data-security/</link>
+      <pubDate>Mon, 17 Jun 2019 20:58:57 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate2-data-security/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#design-concepts-for-security&#34;&gt;Design Concepts for Security&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#design-security-with-aws-services&#34;&gt;Design Security with AWS services&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#design-concepts-for-encryption&#34;&gt;Design Concepts for Encryption&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#design-encryption-with-aws-services&#34;&gt;Design Encryption with AWS services&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#security-scenarios-and-tradeoffs&#34;&gt;Security Scenarios and Tradeoffs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#design-for-dr&#34;&gt;Design for DR&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to set Proxy by jersey client</title>
+      <link>https://hiwanglong.github.io/2019/06/how-to-set-proxy-by-jersey-client/</link>
+      <pubDate>Fri, 14 Jun 2019 15:37:39 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/06/how-to-set-proxy-by-jersey-client/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS Solutions Architect Associate1 - Design and Implement System</title>
+      <link>https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate1-design-and-implement-system/</link>
+      <pubDate>Sun, 09 Jun 2019 09:32:55 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate1-design-and-implement-system/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#aws-serverless-service-desigin&#34;&gt;AWS serverless service desigin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#aws-server-based-service-desigin&#34;&gt;AWS server-based service desigin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#aws-code-tools&#34;&gt;AWS code tools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#aws-apps-of-trade-offs&#34;&gt;AWS apps of Trade-offs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#useful-resources&#34;&gt;Useful resources&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cloud Computing - 初识8 Cloud Career Paths</title>
+      <link>https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%868-cloud-career-paths/</link>
+      <pubDate>Sat, 08 Jun 2019 23:06:14 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%868-cloud-career-paths/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud Computing - 初识7 Azure Fundamentals</title>
+      <link>https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%867-azure-fundamentals/</link>
+      <pubDate>Fri, 07 Jun 2019 16:12:54 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%867-azure-fundamentals/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud Computing - 初识6 Google Compute Engine</title>
+      <link>https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%866-google-compute-engine/</link>
+      <pubDate>Thu, 06 Jun 2019 08:38:08 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%866-google-compute-engine/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction-to-gce&#34;&gt;Introduction to GCE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#exploring-gce&#34;&gt;Exploring GCE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#integrating-user-authentication-oauth-20&#34;&gt;Integrating User Authentication (OAuth 2.0)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#developing-with-js-and-gce&#34;&gt;Developing with JS and GCE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#working-with-python-and-gce&#34;&gt;Working with Python and GCE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#managing-resources-with-gce&#34;&gt;Managing Resources with GCE&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cloud Computing - 初识5 Google Storage and Data</title>
+      <link>https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%865-google-storage-and-data/</link>
+      <pubDate>Mon, 03 Jun 2019 15:02:04 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/06/cloud-computing-%E5%88%9D%E8%AF%865-google-storage-and-data/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#exploring-cloud-storage&#34;&gt;Exploring Cloud Storage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#exploring-cloud-sql&#34;&gt;Exploring Cloud SQL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#exploring-cloud-datastore-%E7%BB%93%E6%9E%84%E5%92%8Celasticsearch%E7%B1%BB%E4%BC%BC&#34;&gt;Exploring Cloud DataStore (结构和Elasticsearch类似)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#exploring-bigquery&#34;&gt;Exploring BigQuery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#manage-storage-and-data-with-python-27&#34;&gt;Manage storage and data with Python (2.7)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cloud Computing - 初识4 cyber security</title>
+      <link>https://hiwanglong.github.io/2019/05/cloud-computing-%E5%88%9D%E8%AF%864-cyber-security/</link>
+      <pubDate>Wed, 29 May 2019 22:26:51 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/05/cloud-computing-%E5%88%9D%E8%AF%864-cyber-security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud Computing - 初识3 storage</title>
+      <link>https://hiwanglong.github.io/2019/05/cloud-computing-%E5%88%9D%E8%AF%863-storage/</link>
+      <pubDate>Thu, 23 May 2019 23:49:14 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/05/cloud-computing-%E5%88%9D%E8%AF%863-storage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud Computing - 初识2</title>
+      <link>https://hiwanglong.github.io/2019/05/cloud-computing-%E5%88%9D%E8%AF%862/</link>
+      <pubDate>Tue, 14 May 2019 21:39:39 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/05/cloud-computing-%E5%88%9D%E8%AF%862/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#migration-to-cloud&#34;&gt;Migration to Cloud&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#basic-to-mirosoft-azure&#34;&gt;Basic to Mirosoft Azure&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#basic-to-google-cloud-platformgcp&#34;&gt;Basic to Google cloud platform(GCP)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cloud Architecture - 初识1</title>
+      <link>https://hiwanglong.github.io/2019/05/cloud-architecture-%E5%88%9D%E8%AF%861/</link>
+      <pubDate>Sun, 12 May 2019 08:26:12 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/05/cloud-architecture-%E5%88%9D%E8%AF%861/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SublimeText 简单配置(持续更新中...ing)</title>
+      <link>https://hiwanglong.github.io/2019/05/sublimetext-%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD...ing/</link>
+      <pubDate>Sat, 11 May 2019 19:20:43 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/05/sublimetext-%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD...ing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Learning Docker</title>
+      <link>https://hiwanglong.github.io/2019/04/learning-docker/</link>
+      <pubDate>Mon, 29 Apr 2019 15:53:18 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/04/learning-docker/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.docker.com/&#34;&gt;https://www.docker.com/&lt;/a&gt; &lt;br&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Learning PagerDuty</title>
+      <link>https://hiwanglong.github.io/2019/04/learning-pagerduty/</link>
+      <pubDate>Mon, 29 Apr 2019 10:12:13 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/04/learning-pagerduty/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://oracle-sic.pagerduty.com/incidents&#34;&gt;https://oracle-sic.pagerduty.com/incidents&lt;/a&gt; &lt;br&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Authentication 认证 vs Authorization 授权 </title>
+      <link>https://hiwanglong.github.io/2019/04/authentication-%E8%AE%A4%E8%AF%81-vs-authorization-%E6%8E%88%E6%9D%83/</link>
+      <pubDate>Sun, 14 Apr 2019 17:12:22 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/04/authentication-%E8%AE%A4%E8%AF%81-vs-authorization-%E6%8E%88%E6%9D%83/</guid>
+      <description>&lt;p&gt;Authentication 认证 &lt;br&gt;
+Authorization 授权 &lt;br&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>TestNg - Parameter</title>
+      <link>https://hiwanglong.github.io/2019/04/testng-parameter/</link>
+      <pubDate>Sun, 14 Apr 2019 13:43:32 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/04/testng-parameter/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.cnblogs.com/haigege/p/5450742.html&#34;&gt;https://www.cnblogs.com/haigege/p/5450742.html&lt;/a&gt; &lt;br&gt;
+&lt;a href=&#34;https://www.cnblogs.com/Roger1227/p/3851159.html&#34;&gt;https://www.cnblogs.com/Roger1227/p/3851159.html&lt;/a&gt; &lt;br&gt;
+&lt;a href=&#34;https://testng.org/doc/documentation-main.html#parameters&#34;&gt;https://testng.org/doc/documentation-main.html#parameters&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;-1. @Parameters&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java Spring OAuth</title>
+      <link>https://hiwanglong.github.io/2019/04/java-spring-oauth/</link>
+      <pubDate>Thu, 11 Apr 2019 12:13:11 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/04/java-spring-oauth/</guid>
+      <description>&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title>TestNg - Parallel</title>
+      <link>https://hiwanglong.github.io/2019/04/testng-parallel/</link>
+      <pubDate>Thu, 11 Apr 2019 12:07:53 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/04/testng-parallel/</guid>
+      <description>&lt;h3 id=&#34;转载&#34;&gt;转载&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.importnew.com/14508.html&#34;&gt;http://www.importnew.com/14508.html&lt;/a&gt; &lt;br&gt;
+&lt;a href=&#34;https://www.cnblogs.com/znicy/p/6534893.html&#34;&gt;https://www.cnblogs.com/znicy/p/6534893.html&lt;/a&gt; &lt;br&gt;
+&lt;a href=&#34;https://testng.org/doc/documentation-main.html#parallel-running&#34;&gt;https://testng.org/doc/documentation-main.html#parallel-running&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java and Jason</title>
+      <link>https://hiwanglong.github.io/2019/04/java-and-jason/</link>
+      <pubDate>Thu, 11 Apr 2019 10:35:40 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/04/java-and-jason/</guid>
+      <description>&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://fasterxml.github.io/jackson-databind/javadoc/2.2.0/com/fasterxml/jackson/databind/JsonNode.html&#34;&gt;https://fasterxml.github.io/jackson-databind/javadoc/2.2.0/com/fasterxml/jackson/databind/JsonNode.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java Jersey HTTP request</title>
+      <link>https://hiwanglong.github.io/2019/04/java-jersey-http-request/</link>
+      <pubDate>Wed, 10 Apr 2019 21:34:36 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/04/java-jersey-http-request/</guid>
+      <description>&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title>Shell import certificate to JDK</title>
+      <link>https://hiwanglong.github.io/2019/04/shell-import-certificate-to-jdk/</link>
+      <pubDate>Wed, 10 Apr 2019 21:24:54 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/04/shell-import-certificate-to-jdk/</guid>
+      <description>&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python getopt模块</title>
+      <link>https://hiwanglong.github.io/2019/04/python-getopt%E6%A8%A1%E5%9D%97/</link>
+      <pubDate>Wed, 10 Apr 2019 21:16:23 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/04/python-getopt%E6%A8%A1%E5%9D%97/</guid>
+      <description>&lt;h3 id=&#34;example-testgetopt-py&#34;&gt;Example: testGetOpt.py&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java Load Config Properties</title>
+      <link>https://hiwanglong.github.io/2019/04/java-load-config-properties/</link>
+      <pubDate>Wed, 10 Apr 2019 21:06:09 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/04/java-load-config-properties/</guid>
+      <description>&lt;h3 id=&#34;class-example&#34;&gt;Class Example&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cloud Computing - 初识1</title>
+      <link>https://hiwanglong.github.io/2019/04/cloud-computing-%E5%88%9D%E8%AF%861/</link>
+      <pubDate>Tue, 09 Apr 2019 18:03:32 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/04/cloud-computing-%E5%88%9D%E8%AF%861/</guid>
+      <description>&lt;p&gt;云计算，将计算资源当成一种公共服务提供给用户，通过浏览器直接使用&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python - Foundation</title>
+      <link>https://hiwanglong.github.io/2018/07/python-foundation/</link>
+      <pubDate>Mon, 30 Jul 2018 16:22:00 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2018/07/python-foundation/</guid>
+      <description>https://docs.python.org/3/library/index.html
+  -1. print format and f string, use print()
+eg: x=&#39;seven&#39; print(&#39;x is {}&#39;.format(x)) print (&#39;x is {} {}&#39;.format (8,10)) print (&#39;x is {1:&amp;lt;09} {0:&amp;gt;09}&#39;.format (8,10)) a=8 b=10 x= f&#39;seven {b} {a}&#39; print (x)  -2. decimal
+eg: from decimal import * a = Decimal(&#39;.10&#39;) b = Decimal(&#39;.30&#39;) x = a+a+a-b print (x) --&amp;gt;0.00 if no decimal, x is almost 0 but not 0 due to accuracy and precision  -3.</description>
+    </item>
+    
+    <item>
+      <title>Java Insert SSL certificate</title>
+      <link>https://hiwanglong.github.io/2018/03/java-insert-ssl-certificate/</link>
+      <pubDate>Mon, 26 Mar 2018 18:34:37 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2018/03/java-insert-ssl-certificate/</guid>
+      <description>&lt;h3 id=&#34;class-example&#34;&gt;Class Example&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java 远程连接SSH</title>
+      <link>https://hiwanglong.github.io/2018/03/java-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5ssh/</link>
+      <pubDate>Mon, 26 Mar 2018 18:28:28 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2018/03/java-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5ssh/</guid>
+      <description>&lt;h3 id=&#34;class-example-java-ssh-client&#34;&gt;Class Example-Java SSH Client&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title>Introduction to BigData</title>
+      <link>https://hiwanglong.github.io/2018/03/introduction-to-bigdata/</link>
+      <pubDate>Thu, 01 Mar 2018 10:37:35 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2018/03/introduction-to-bigdata/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;Hadoop :处理大数据的开源框架
+including:
+
+&lt;ul&gt;
+&lt;li&gt;MapReduce： 处理大数据的program&lt;/li&gt;
+&lt;li&gt;HDFS： 文件系统&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>ElasticSearch - 初识</title>
+      <link>https://hiwanglong.github.io/2018/02/elasticsearch-%E5%88%9D%E8%AF%86/</link>
+      <pubDate>Thu, 22 Feb 2018 17:03:55 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2018/02/elasticsearch-%E5%88%9D%E8%AF%86/</guid>
+      <description>&lt;p&gt;-1. 基本概念 &lt;br&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux Free 命令</title>
+      <link>https://hiwanglong.github.io/2018/02/linux-free-%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Thu, 08 Feb 2018 11:51:26 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2018/02/linux-free-%E5%91%BD%E4%BB%A4/</guid>
+      <description>free -m sync echo 1 &amp;gt; /proc/sys/vm/drop_caches echo 2 &amp;gt; /proc/sys/vm/drop_caches echo 3 &amp;gt; /proc/sys/vm/drop_caches free -m  refrence http://www.cnblogs.com/52linux/archive/2012/03/08/2385399.html</description>
+    </item>
+    
+    <item>
+      <title>Java远程调试（Remote Debug)</title>
+      <link>https://hiwanglong.github.io/2018/01/java%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95remote-debug/</link>
+      <pubDate>Fri, 26 Jan 2018 13:13:53 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2018/01/java%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95remote-debug/</guid>
+      <description>&lt;p&gt;以Weblogic+Eclipse为例 &lt;br&gt;
+1. Enalbe remote debug at Weblogic  &lt;br&gt;
+-&amp;gt; Open Weblogic Console Page &lt;br&gt;
+-&amp;gt; Click Environment&lt;br&gt;
+-&amp;gt; Click Servers &lt;br&gt;
+-&amp;gt; Select server which you want debug on &lt;br&gt;
+-&amp;gt; Click server start tab &lt;br&gt;
+-&amp;gt; Add Arguments with&lt;br&gt;
+    agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=9999&lt;br&gt;
+-&amp;gt; Restart the server from Weblogic Console Page(Server -&amp;gt; Control)&lt;br&gt;
+-&amp;gt; If failed to restart, pls run startNodeManager.sh&lt;br&gt;
+-&amp;gt; Start the server by scripts will not work&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Oracle_BlobClob</title>
+      <link>https://hiwanglong.github.io/2018/01/oracle_blobclob/</link>
+      <pubDate>Wed, 03 Jan 2018 14:57:28 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2018/01/oracle_blobclob/</guid>
+      <description>&lt;p&gt;Steps to Attach &amp;ldquo;10M.zip&amp;rdquo; file to Oracle Table &lt;br&gt;
+1. Save &amp;ldquo;10M.zip&amp;rdquo; file at DUMP_DIR &lt;br&gt;
+2. Attach &lt;br&gt;
+3. Check if Attach successfully &lt;br&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Testng - DataProvider</title>
+      <link>https://hiwanglong.github.io/2017/12/testng-dataprovider/</link>
+      <pubDate>Mon, 11 Dec 2017 18:31:43 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2017/12/testng-dataprovider/</guid>
+      <description>&lt;p&gt;根据官方文档，DataProvider只能有2种类型的返回&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Object[][]
+Iterator&amp;lt;Object[]&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>亲爱的客栈 - 王珂的信</title>
+      <link>https://hiwanglong.github.io/2017/12/%E4%BA%B2%E7%88%B1%E7%9A%84%E5%AE%A2%E6%A0%88-%E7%8E%8B%E7%8F%82%E7%9A%84%E4%BF%A1/</link>
+      <pubDate>Sun, 03 Dec 2017 11:34:02 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2017/12/%E4%BA%B2%E7%88%B1%E7%9A%84%E5%AE%A2%E6%A0%88-%E7%8E%8B%E7%8F%82%E7%9A%84%E4%BF%A1/</guid>
+      <description>&lt;p&gt;十年，两个字，读来无需半秒。可细想，人掐头去尾又能有几个头脑清醒四肢灵活的十年？三四个顶多。我感激上苍，任我生命中最好的四分之一与你开篇。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>《刻意学习》 读书笔记</title>
+      <link>https://hiwanglong.github.io/2017/11/%E5%88%BB%E6%84%8F%E5%AD%A6%E4%B9%A0-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 22 Nov 2017 20:29:54 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2017/11/%E5%88%BB%E6%84%8F%E5%AD%A6%E4%B9%A0-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#%E6%9C%89%E7%9B%AE%E7%9A%84%E7%9A%84%E7%BB%83%E4%B9%A0&#34;&gt;有目的的练习&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E5%A4%A7%E8%84%91%E7%9A%84%E9%80%82%E5%BA%94%E8%83%BD%E5%8A%9B&#34;&gt;大脑的适应能力&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E5%BF%83%E7%90%86%E8%A1%A8%E5%BE%81&#34;&gt;心理表征&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E9%BB%84%E9%87%91%E6%A0%87%E5%87%86&#34;&gt;黄金标准&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E5%B7%A5%E4%BD%9C%E4%B8%AD%E8%BF%90%E7%94%A8%E5%88%BB%E6%84%8F%E7%BB%83%E4%B9%A0&#34;&gt;工作中运用刻意练习&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%BF%90%E7%94%A8%E5%88%BB%E6%84%8F%E7%BB%83%E4%B9%A0&#34;&gt;生活中运用刻意练习&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E6%88%90%E4%B8%BA%E6%9D%B0%E5%87%BA%E4%BA%BA%E7%89%A9%E7%9A%84%E8%B7%AF%E7%BA%BF%E5%9B%BE&#34;&gt;成为杰出人物的路线图&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;
+
+&lt;p&gt;&lt;a id=&#34;%E6%9C%89%E7%9B%AE%E7%9A%84%E7%9A%84%E7%BB%83%E4%B9%A0&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;有目的的练习&#34;&gt;有目的的练习&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;明确的目标：小的，可以达成的，具体的&lt;/li&gt;
+&lt;li&gt;专注：注意力集中&lt;/li&gt;
+&lt;li&gt;反馈：判断自己不足的地方&lt;/li&gt;
+&lt;li&gt;走出舒适区&lt;/li&gt;
+&lt;li&gt;试着做不同的事情&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>北疆归来流水帐</title>
+      <link>https://hiwanglong.github.io/2017/10/%E5%8C%97%E7%96%86%E5%BD%92%E6%9D%A5%E6%B5%81%E6%B0%B4%E5%B8%90/</link>
+      <pubDate>Sun, 15 Oct 2017 20:46:32 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2017/10/%E5%8C%97%E7%96%86%E5%BD%92%E6%9D%A5%E6%B5%81%E6%B0%B4%E5%B8%90/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#day-1-%E4%B9%8C%E9%B2%81%E6%9C%A8%E9%BD%90-%EF%BC%881003&#34;&gt;Day 1 乌鲁木齐 （10/03)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#day-2-%E5%A4%A9%E5%B1%B1%E5%A4%A9%E6%B1%A0-%EF%BC%881004&#34;&gt;Day 2 天山天池 （10/04)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#day-3-%E4%B9%8C-%E5%8C%97-%E5%B8%83-%E7%A6%BE%E6%9C%A8-%EF%BC%881005&#34;&gt;Day 3 乌-北-布-禾木 （10/05)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#day-4-%E7%A6%BE%E6%9C%A8-%E5%96%80%E7%BA%B3%E6%96%AF-%EF%BC%881006&#34;&gt;Day 4 禾木-喀纳斯 （10/06)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#day-5-%E5%96%80-%E5%B8%83-%E5%8C%97-%E4%B9%8C%E8%BF%94%E7%A8%8B-%EF%BC%881007&#34;&gt;Day 5 喀-布-北-乌返程 （10/07)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#day-6-%E4%B9%8C%E9%B2%81%E6%9C%A8%E9%BD%90-%EF%BC%881008&#34;&gt;Day 6 乌鲁木齐 （10/08)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#day-7-8%E6%95%A6%E7%85%8C-%EF%BC%881009-10&#34;&gt;Day 7-8敦煌 （10/09-10)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#day-9-%E5%BC%A0%E6%8E%96-%EF%BC%881011&#34;&gt;Day 9 张掖 （10/11)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#day-10-%E8%8C%B6%E5%8D%A1%E7%9B%90%E6%B9%96-%EF%BC%881012&#34;&gt;Day 10 茶卡盐湖 （10/12)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#day-11-%E8%BF%94%E6%B7%B1-%EF%BC%881013&#34;&gt;Day 11 返深 （10/13)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E4%BA%BA%E5%9D%87%E8%8A%B1%E8%B4%B9%E7%BA%A6%EF%BC%9A4000%EF%BC%88%E4%B8%8D%E5%90%AB%E9%A3%9E%E6%9C%BA%E7%A5%A8%EF%BC%89&#34;&gt;人均花费约：4000（不含飞机票）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;
+
+&lt;p&gt;北疆回来一周多了，十天的行程，日出，雪山，沙漠等等都跃然眼前。新疆，甘肃，西宁一路的勾搭的小伙伴们，谢谢。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Jacoco agent - Setting JAVA_OPTIONS</title>
+      <link>https://hiwanglong.github.io/2017/09/jacoco-agent-setting-java_options/</link>
+      <pubDate>Wed, 20 Sep 2017 16:06:11 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2017/09/jacoco-agent-setting-java_options/</guid>
+      <description>&lt;h4 id=&#34;steps-to-create-code-coverage-report&#34;&gt;Steps to create code coverage report&lt;/h4&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git - Setting global config</title>
+      <link>https://hiwanglong.github.io/2017/09/git-setting-global-config/</link>
+      <pubDate>Wed, 20 Sep 2017 16:00:25 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2017/09/git-setting-global-config/</guid>
+      <description>&lt;p&gt;Some Git settings are useful to have globally, in your ~/.gitconfig file.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Jenkins - 初识</title>
+      <link>https://hiwanglong.github.io/2017/09/jenkins-%E5%88%9D%E8%AF%86/</link>
+      <pubDate>Wed, 20 Sep 2017 15:19:57 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2017/09/jenkins-%E5%88%9D%E8%AF%86/</guid>
+      <description>&lt;p&gt;-1. launch jenkins&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;java -jar jenkins.war &amp;amp;
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux SSH 命令</title>
+      <link>https://hiwanglong.github.io/2017/09/linux-ssh-%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Wed, 20 Sep 2017 10:26:06 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2017/09/linux-ssh-%E5%91%BD%E4%BB%A4/</guid>
+      <description>&lt;h3 id=&#34;ssh&#34;&gt;ssh&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;ssh user@server
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Oracle - 逻辑备份EXP/IMP</title>
+      <link>https://hiwanglong.github.io/2017/09/oracle-%E9%80%BB%E8%BE%91%E5%A4%87%E4%BB%BDexp/imp/</link>
+      <pubDate>Mon, 18 Sep 2017 22:09:24 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2017/09/oracle-%E9%80%BB%E8%BE%91%E5%A4%87%E4%BB%BDexp/imp/</guid>
+      <description>&lt;p&gt;Oracle数据库有3中标准的备份方法：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;导出／导入（EXP/IMP）&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>陕西行流水帐</title>
+      <link>https://hiwanglong.github.io/2017/09/%E9%99%95%E8%A5%BF%E8%A1%8C%E6%B5%81%E6%B0%B4%E5%B8%90/</link>
+      <pubDate>Sun, 17 Sep 2017 10:14:57 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2017/09/%E9%99%95%E8%A5%BF%E8%A1%8C%E6%B5%81%E6%B0%B4%E5%B8%90/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#day-1-%E8%A5%BF%E5%AE%89-%EF%BC%880813%EF%BC%89&#34;&gt;Day 1 西安 （08/13）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#day-2-%E8%A5%BF%E5%AE%89-%EF%BC%880814%EF%BC%89&#34;&gt;Day 2 西安 （08/14）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#day-3-%E8%A5%BF%E5%AE%89-%EF%BC%880815%EF%BC%89&#34;&gt;Day 3 西安 （08/15）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#day-4-%E6%B4%9B%E9%98%B3-%EF%BC%880816%EF%BC%89&#34;&gt;Day 4 洛阳 （08/16）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#day-5-%E6%B4%9B%E9%98%B3-%EF%BC%880817%EF%BC%89&#34;&gt;Day 5 洛阳 （08/17）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#day-6-%E5%8D%8E%E5%B1%B1-%EF%BC%880818%EF%BC%89&#34;&gt;Day 6 华山 （08/18）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#day-7-%E5%8D%8E%E5%B1%B1-%EF%BC%880819%EF%BC%89&#34;&gt;Day 7 华山 （08/19）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#day-8-%E5%92%B8%E9%98%B3-%EF%BC%880820%EF%BC%89&#34;&gt;Day 8 咸阳 （08/20）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#day-9-%E5%9B%9E%E5%AE%B6&#34;&gt;Day 9 回家&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E4%BA%BA%E5%9D%87%E8%8A%B1%E8%B4%B9%E7%BA%A6%EF%BC%9A3600&#34;&gt;人均花费约：3600&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;
+
+&lt;p&gt;&lt;a id=&#34;day-1-%E8%A5%BF%E5%AE%89-%EF%BC%880813%EF%BC%89&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;day-1-西安-08-13&#34;&gt;Day 1 西安 （08/13）&lt;/h3&gt;
+
+&lt;p&gt;-1. 中午11点抵达西安国际机场，做机场大巴前往西安市区 （大巴票价：25元）&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Oracle - 复制表</title>
+      <link>https://hiwanglong.github.io/2017/09/oracle-%E5%A4%8D%E5%88%B6%E8%A1%A8/</link>
+      <pubDate>Sat, 16 Sep 2017 20:14:57 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2017/09/oracle-%E5%A4%8D%E5%88%B6%E8%A1%A8/</guid>
+      <description>&lt;h3 id=&#34;oracle-复制表&#34;&gt;Oracle-复制表&lt;/h3&gt;
+
+&lt;p&gt;-1. 复制表结构及其数据：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;create table table_name_new as select * from table_name_old
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>用Hugo搭建博客</title>
+      <link>https://hiwanglong.github.io/2017/09/%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Sat, 16 Sep 2017 18:14:57 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2017/09/%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C&#34;&gt;准备工作&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%94%9F%E6%88%90%E7%AB%99%E7%82%B9&#34;&gt;生成站点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E9%83%A8%E7%BD%B2&#34;&gt;部署&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3&#34;&gt;参考文档&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;
+
+&lt;p&gt;&lt;a id=&#34;%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;准备工作&#34;&gt;准备工作&lt;/h3&gt;
+
+&lt;p&gt;-1. gitHub&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>First</title>
+      <link>https://hiwanglong.github.io/2017/09/first/</link>
+      <pubDate>Sat, 16 Sep 2017 17:14:57 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2017/09/first/</guid>
+      <description>&lt;h3 id=&#34;hello-hugo&#34;&gt;Hello Hugo&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://hiwanglong.github.io/1/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hiwanglong.github.io/1/01/</guid>
+      <description>&amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-surefire-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.19.1&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;forkCount&amp;gt;3&amp;lt;/forkCount&amp;gt; &amp;lt;reuseForks&amp;gt;true&amp;lt;/reuseForks&amp;gt; &amp;lt;argLine&amp;gt; -javaagent:&amp;quot;${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar&amp;quot; &amp;lt;/argLine&amp;gt; &amp;lt;suiteXmlFiles&amp;gt; &amp;lt;suiteXmlFile&amp;gt;${suiteXmlFile}&amp;lt;/suiteXmlFile&amp;gt; &amp;lt;/suiteXmlFiles&amp;gt; &amp;lt;testFailureIgnore&amp;gt;true&amp;lt;/testFailureIgnore&amp;gt; &amp;lt;systemProperties&amp;gt; &amp;lt;propertiesFilePath&amp;gt;src/test/resources/allure.properties&amp;lt;/propertiesFilePath&amp;gt; &amp;lt;/systemProperties&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.aspectj&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;aspectjweaver&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${aspectj.version}&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; &amp;lt;/plugin&amp;gt; &amp;lt;/plugins&amp;gt; &amp;lt;/build&amp;gt; ```   report: allure-maven
+&amp;lt;reporting&amp;gt; &amp;lt;excludeDefaults&amp;gt;true&amp;lt;/excludeDefaults&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;io.qameta.allure&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;allure-maven&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.10.0&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;reportVersion&amp;gt;${allure.version}&amp;lt;/reportVersion&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;/plugin&amp;gt; &amp;lt;/plugins&amp;gt; &amp;lt;/reporting&amp;gt;  2.2 allure.properties
+allure.results.directory=target/allure-results allure.link.issue.pattern=https://example.org/issue/{} allure.link.tms.pattern=https://example.org/tms/{}   2.3 运行命令
+ mvn clean test -DsuiteXmlFile=src/test/resources/testng_sanity.xml
+ 生成allure报告：mvn io.qameta.allure:allure-maven:serve OR mvn io.qameta.allure:allure-maven:report
+   Integrate with Jenkins  3.</description>
+    </item>
+    
+  </channel>
+</rss>

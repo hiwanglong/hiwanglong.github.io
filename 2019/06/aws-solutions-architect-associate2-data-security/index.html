@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.55.5 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="Stella Wang">
+<meta name="keywords" content="Data Security">
+<meta name="description" content="
+
+
+Design Concepts for Security
+Design Security with AWS services
+Design Concepts for Encryption
+Design Encryption with AWS services
+Security Scenarios and Tradeoffs
+Design for DR
+
+
+">
+
+
+<meta property="og:description" content="
+
+
+Design Concepts for Security
+Design Security with AWS services
+Design Concepts for Encryption
+Design Encryption with AWS services
+Security Scenarios and Tradeoffs
+Design for DR
+
+
+">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AWS Solutions Architect Associate2 - Data Security">
+<meta name="twitter:title" content="AWS Solutions Architect Associate2 - Data Security">
+<meta property="og:url" content="https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate2-data-security/">
+<meta property="twitter:url" content="https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate2-data-security/">
+<meta property="og:site_name" content="Stella">
+<meta property="og:description" content="
+
+
+Design Concepts for Security
+Design Security with AWS services
+Design Concepts for Encryption
+Design Encryption with AWS services
+Security Scenarios and Tradeoffs
+Design for DR
+
+
+">
+<meta name="twitter:description" content="
+
+
+Design Concepts for Security
+Design Security with AWS services
+Design Concepts for Encryption
+Design Encryption with AWS services
+Security Scenarios and Tradeoffs
+Design for DR
+
+
+">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2019-06-17T20:58:57">
+  
+  
+    <meta property="article:modified_time" content="2019-06-17T20:58:57">
+  
+  
+  
+    
+      <meta property="article:section" content="Tech">
+    
+      <meta property="article:section" content="Lynda Note">
+    
+  
+  
+    
+      <meta property="article:tag" content="AWS">
+    
+      <meta property="article:tag" content="Solutions">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=640">
+
+
+    <title>AWS Solutions Architect Associate2 - Data Security</title>
+
+    <link rel="icon" href="https://hiwanglong.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate2-data-security/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://hiwanglong.github.io/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://hiwanglong.github.io/">Stella</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://hiwanglong.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://hiwanglong.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Stella Wang</h4>
+        
+          <h5 class="sidebar-profile-bio">桃李春风一杯酒，江湖夜雨十年灯</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      AWS Solutions Architect Associate2 - Data Security
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-06-17T20:58:57&#43;08:00">
+        
+  June 17, 2019
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://hiwanglong.github.io/categories/tech">Tech</a>, 
+    
+      <a class="category-link" href="https://hiwanglong.github.io/categories/lynda-note">Lynda Note</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <!-- MarkdownTOC -->
+
+<ul>
+<li><a href="#design-concepts-for-security">Design Concepts for Security</a></li>
+<li><a href="#design-security-with-aws-services">Design Security with AWS services</a></li>
+<li><a href="#design-concepts-for-encryption">Design Concepts for Encryption</a></li>
+<li><a href="#design-encryption-with-aws-services">Design Encryption with AWS services</a></li>
+<li><a href="#security-scenarios-and-tradeoffs">Security Scenarios and Tradeoffs</a></li>
+<li><a href="#design-for-dr">Design for DR</a></li>
+</ul>
+
+<!-- /MarkdownTOC -->
+
+<p><a id="design-concepts-for-security"></a></p>
+
+<h3 id="design-concepts-for-security">Design Concepts for Security</h3>
+
+<ol>
+<li>Data is money</li>
+<li>Design
+
+<ul>
+<li>Metrics</li>
+<li>Monitor</li>
+<li>Management</li>
+<li>SLA</li>
+</ul></li>
+<li>Shared Model
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/1-sharedModel.png" >
+  
+  
+</div>
+
+
+<ul>
+<li>What customer do: secures app in the aws cloud</li>
+<li>What AWS do:
+
+<ul>
+<li>secures the aws cloud;</li>
+<li>provides patterns, checklist and whitepapers</li>
+</ul></li>
+<li>Devs should not own security</li>
+<li>Audits, aws audit guidance
+
+<ul>
+<li>secuirty audits</li>
+<li>compliance audits</li>
+<li>internal or external auditors</li>
+</ul></li>
+</ul></li>
+<li>Data Flow
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/2-dataFlow.png" >
+  
+  
+</div>
+
+
+<ul>
+<li>external entities</li>
+<li>processes-single, multiple</li>
+<li>data stores</li>
+<li>data flows</li>
+<li>privilege boundaries</li>
+</ul></li>
+<li>Negative use cases
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/3-negative.png" >
+  
+  
+</div>
+
+
+<ul>
+<li>postive path (happy path), expect pass</li>
+<li>negative path (err path), expect fail</li>
+</ul></li>
+<li>Threat Model
+
+<ul>
+<li>ranking threats by a risk model
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/4-riskModel.png" >
+  
+  
+</div>
+</li>
+<li>ranking threat model
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/5-threatModel.png" >
+  
+  
+</div>
+</li>
+<li>reference
+
+<ul>
+<li>application threat modeling</li>
+<li>CI Amazon web service foundations</li>
+</ul></li>
+</ul></li>
+</ol>
+
+<p><a id="design-security-with-aws-services"></a></p>
+
+<h3 id="design-security-with-aws-services">Design Security with AWS services</h3>
+
+<ol>
+<li>core AWS security services
+
+<ul>
+<li>IAM</li>
+<li>Inspector</li>
+<li>Certificate Manager</li>
+<li>Directory service</li>
+<li>WAF &amp; Shield</li>
+<li>Artifact</li>
+<li>Amazon Macie</li>
+<li>CloudHSM</li>
+</ul></li>
+<li>IAM: users and roles
+
+<ul>
+<li>add IAM user
+
+<ul>
+<li>access type, pwd</li>
+<li>create group, set police to the group</li>
+<li>sign in your IAM user</li>
+<li>customer your login URL</li>
+</ul></li>
+<li>create role to your IAM user
+
+<ul>
+<li>select trust aws service,eg: EC2</li>
+<li>give it police</li>
+</ul></li>
+</ul></li>
+<li>IAM: root
+
+<ul>
+<li>one email per AWS account is root</li>
+<li>who set the account who get root credentials</li>
+<li>no one should be with root in a prod env</li>
+<li>aws root should use MFA</li>
+<li>reference: IAM Best Practices</li>
+</ul></li>
+<li>IAM: policies
+
+<ul>
+<li>attach existed police</li>
+<li>create police
+
+<ul>
+<li>set permissions</li>
+<li>ARN(amazon resource name)</li>
+</ul></li>
+<li>run simulation</li>
+</ul></li>
+<li>Logging: CloudWatch and CloudTrail
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/6-logging.png" >
+  
+  
+</div>
+
+
+<ul>
+<li>CloudWatch: support alarm</li>
+</ul></li>
+<li>EC2 with inspector
+
+<ul>
+<li>run a series of scans and provides with assessment results that you can action</li>
+<li>types:
+
+<ul>
+<li>common vulnerabilities and exposures</li>
+<li>center for internet security (CIS) benchmarks</li>
+<li>security best practices</li>
+<li>runtime behavior ananlysis</li>
+</ul></li>
+</ul></li>
+<li>EC2 with WAF (web application firewall)
+
+<ul>
+<li>for layers and middleware</li>
+<li>a tool can help mitigate DDoS (Distributed Denial of Service) attacks</li>
+<li>WAF works with lb</li>
+<li>WAF works with cloud front distributions for HTTP and HTTPS requests</li>
+<li>WAF works with  Route53(DNS)</li>
+<li>WAF shield</li>
+</ul></li>
+<li>VPC security
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/7-vpc.png" >
+  
+  
+</div>
+</li>
+</ol>
+
+<p><a id="design-concepts-for-encryption"></a></p>
+
+<h3 id="design-concepts-for-encryption">Design Concepts for Encryption</h3>
+
+<ol>
+<li>what&rsquo;s encryption?
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/8-encryption.png" >
+  
+  
+</div>
+
+
+<ul>
+<li>No crypto is better than bad crypto</li>
+</ul></li>
+<li>How to manage you keys?
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/9-encryption.png" >
+  
+  
+</div>
+
+
+<ul>
+<li>create -&gt; generate -&gt; activate -&gt; use -&gt; rotate -&gt; deactivate -&gt; deactive</li>
+<li>encryption key managemetns choices</li>
+<li>data encrytion in AWS</li>
+</ul></li>
+<li>client-side vs server-side encrytion
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/10-encryption.png" >
+  
+  
+</div>
+
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/11-encryption.png" >
+  
+  
+</div>
+
+
+<ul>
+<li>client-side
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/12-csEncryption.png" >
+  
+  
+</div>
+</li>
+<li>server-side
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/13-ssEncryption.png" >
+  
+  
+</div>
+</li>
+</ul></li>
+<li>data protestion at rest and in transit
+
+<ul>
+<li>at rest</li>
+<li>in transit
+
+<ul>
+<li>to the edge, over the public internet</li>
+<li>at the edge
+
+<ul>
+<li>within aws: no vpc between services</li>
+<li>within aws: vpc between sercices</li>
+<li>between aws regions</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>design PCI DSS requriement
+
+<ul>
+<li>payment card industry (PCI) data security standard
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/14-PCI.png" >
+  
+  
+</div>
+</li>
+</ul></li>
+<li>summary
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/15-encryption.png" >
+  
+  
+</div>
+</li>
+</ol>
+
+<p><a id="design-encryption-with-aws-services"></a></p>
+
+<h3 id="design-encryption-with-aws-services">Design Encryption with AWS services</h3>
+
+<ol>
+<li>What&rsquo;s CMK (customer master key)?
+
+<ul>
+<li>A logical key that represents the top of a customer&rsquo;s key hierarchy.</li>
+<li>A CMK is given an Amazon Resource Name (ARN) that include a unique key identifier or key ID.</li>
+</ul></li>
+<li>What&rsquo;s Data keys?
+
+<ul>
+<li>Cryptographic keys generated on an HSA under a CMK</li>
+</ul></li>
+<li>How AWS key management service works?
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/16.png" >
+  
+  
+</div>
+</li>
+<li>How AWS services integrate with KMS?
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/17.png" >
+  
+  
+</div>
+</li>
+<li>KMS Polices
+
+<ul>
+<li>IAM policies are attached to IAM users, groups and roles</li>
+<li>KMS key policies are attached to CMKs</li>
+<li>Use IAM polices in combination with CMK policy
+
+<ul>
+<li>set the CMK key policy to include policy statement that enables IAM polices</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/18.png" >
+  
+  
+</div>
+</li>
+<li>use IAM policies to control use of encryption keys</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/19.png" >
+  
+  
+</div>
+</li>
+</ul></li>
+<li>LC
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/20.png" >
+  
+  
+</div>
+</li>
+</ul></li>
+<li>HSM (hardware security module)
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/21.png" >
+  
+  
+</div>
+
+
+<ul>
+<li>hardware devices for crypto ops and key storage</li>
+</ul></li>
+<li>What&rsquo;s Macie?
+
+<ul>
+<li>It&rsquo;s a serucity service that use ML to automatically discover, classify and protect sensitive data in AWS.</li>
+</ul></li>
+<li>Design Encryption for S3:
+
+<ul>
+<li>client side</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/22.png" >
+  
+  
+</div>
+</li>
+<li>server side</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/23.png" >
+  
+  
+</div>
+</li>
+</ul></li>
+<li>Design Encryption for RedShift:</li>
+<li>Design Encryption for EC2 EBS volumes:
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/24.png" >
+  
+  
+</div>
+
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/25.png" >
+  
+  
+</div>
+</li>
+<li>Design Encryption for IOT:
+
+<ul>
+<li>AWS IoT objects
+
+<ul>
+<li>things (devices)</li>
+<li>certificaes (keys)</li>
+<li>IoT policies (permissions)</li>
+</ul></li>
+<li>All AWS IoT objects operate OUTSIDE of the other AWS security services, including IAM policies, Certificate Manager certificates, etc.</li>
+</ul></li>
+<li>Encryption with Certificate Manager
+
+<ul>
+<li>make it easy to provision, manage and deploy, renew, SSL and TLS certificates on the AWS platform</li>
+</ul></li>
+</ol>
+
+<p><a id="security-scenarios-and-tradeoffs"></a></p>
+
+<h3 id="security-scenarios-and-tradeoffs">Security Scenarios and Tradeoffs</h3>
+
+<ol>
+<li>Third-party data security tool
+
+<ul>
+<li>AWS marketplace for security</li>
+<li>vendor eg: SoftNAS</li>
+</ul></li>
+<li>AWS cloud compliance
+
+<ul>
+<li>eg HIPAA</li>
+</ul></li>
+<li>Scenario1: Public website security
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/26.png" >
+  
+  
+</div>
+
+
+<ul>
+<li>Data Questions:
+
+<ul>
+<li>where is the date at rest?</li>
+<li>which data is sensitive and needs further encryption?</li>
+<li>which path does the data travel through?</li>
+<li>which points in transit pose risks that requrie further security mitigation?</li>
+</ul></li>
+</ul></li>
+<li>Scenario2: Data pipeline security
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/27.png" >
+  
+  
+</div>
+
+
+<ul>
+<li>Securing Data:
+
+<ul>
+<li>Data transfer from on-premises storage to AWS cloud often done incorrectly</li>
+<li>3rd party solutions often used to securely move data from on premises storage to AWS cloud</li>
+<li>reducing the amount of data transferred from on-prmises storage to AWS cloud improves security</li>
+<li>on-premises storage is typically the most unsecure piece of the data pilieline</li>
+<li>lack of security between produce and end-user apps</li>
+</ul></li>
+</ul></li>
+<li>Scenario3: Data lake security (serverless)
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/28.png" >
+  
+  
+</div>
+
+
+<ul>
+<li>Securing Data:
+
+<ul>
+<li>within AWS cloud with sercice instances in a particurlar region</li>
+<li>Need to secure data, both at rest and in transit, with encryption
+
+<ul>
+<li>S3 offers client-side or server-side encryption with different key management options</li>
+<li>import to encrypt both customer and configration data</li>
+<li>AWS handles all encryption and configuation for Lambda</li>
+<li>Amazon is taking on more and more of the responsibilit to secure the compute layer of serverless implementations</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Scenario4: IoT app security
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/29.png" >
+  
+  
+</div>
+
+
+<ul>
+<li>Securing Data:
+
+<ul>
+<li>default, Lambda does not sit in VPCs</li>
+<li>whether or not to use VPC boundary should be a design consideration</li>
+<li>PUB/SUB</li>
+<li>event driven</li>
+</ul></li>
+</ul></li>
+</ol>
+
+<p><a id="design-for-dr"></a></p>
+
+<h3 id="design-for-dr">Design for DR</h3>
+
+<ol>
+<li>DR areas and metrics
+
+<ul>
+<li>what&rsquo;s measured matters
+
+<ul>
+<li>recover files and data</li>
+<li>recover compute</li>
+<li>recover services (DNS, etc.)</li>
+</ul></li>
+<li>RTO: recover time objective
+
+<ul>
+<li>how long can you be down?</li>
+</ul></li>
+<li>RPO: recover point objective
+
+<ul>
+<li>how much data can you lose?</li>
+</ul></li>
+<li>Recovered data verification
+
+<ul>
+<li>how will you verify the correctness of recovered data?</li>
+</ul></li>
+</ul></li>
+<li>DR patterns for data
+
+<ul>
+<li>Files
+
+<ul>
+<li>S3</li>
+<li>Glacier</li>
+</ul></li>
+<li>DB
+
+<ul>
+<li>RDS and Redshift</li>
+<li>DynamoDB</li>
+<li>EMR</li>
+</ul></li>
+</ul></li>
+<li>Recover EC2 with EBS and more
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/30.png" >
+  
+  
+</div>
+
+
+<ul>
+<li>AMI (amazon Machine Image)</li>
+<li>EBS (elastic block storae)</li>
+<li>Snapshot (can be the basis for AMIs)</li>
+</ul></li>
+<li>Recover data with AWS Import/Export
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/31.png" >
+  
+  
+</div>
+
+
+<ul>
+<li>snowball: 50T storage, 10G network &hellip;
+
+<ul>
+<li>a physical device that you request from Amazon through the console or programmacitcally</li>
+<li>API</li>
+</ul></li>
+</ul></li>
+<li>Extend backups via Storage Gateway
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/32.png" >
+  
+  
+</div>
+</li>
+<li>Recover DNS with Route 53
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/2/33.png" >
+  
+  
+</div>
+
+
+<ul>
+<li>define Health Checks</li>
+</ul></li>
+<li>DR recovery practices
+
+<ul>
+<li>perform regular DR test (scheduled or un scheduled)</li>
+<li>follow written recovery procedures (runbooks)</li>
+<li>aws white papere: aws_disaster_recovery</li>
+</ul></li>
+<li>Other resources:
+
+<ul>
+<li>CIS</li>
+<li>AWS Community Heroes</li>
+<li>Lynn Langit</li>
+</ul></li>
+</ol>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://hiwanglong.github.io/tags/aws/">AWS</a>
+
+  <a class="tag tag--primary tag--small" href="https://hiwanglong.github.io/tags/solutions/">Solutions</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hiwanglong.github.io/2019/06/java-how-to-readscanner-file/" data-tooltip="Java - How to read(scanner) file?">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hiwanglong.github.io/2019/06/how-to-set-proxy-by-jersey-client/" data-tooltip="How to set Proxy by jersey client">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate2-data-security/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate2-data-security/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate2-data-security/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2020 Stella Wang. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hiwanglong.github.io/2019/06/java-how-to-readscanner-file/" data-tooltip="Java - How to read(scanner) file?">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hiwanglong.github.io/2019/06/how-to-set-proxy-by-jersey-client/" data-tooltip="How to set Proxy by jersey client">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate2-data-security/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate2-data-security/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate2-data-security/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhiwanglong.github.io%2F2019%2F06%2Faws-solutions-architect-associate2-data-security%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhiwanglong.github.io%2F2019%2F06%2Faws-solutions-architect-associate2-data-security%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhiwanglong.github.io%2F2019%2F06%2Faws-solutions-architect-associate2-data-security%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Stella Wang</h4>
+    
+      <div id="about-card-bio">桃李春风一杯酒，江湖夜雨十年灯</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        SOHO
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/12/linux_pipeline/">
+                <h3 class="media-heading">Linux_Pipeline</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/12/linux_sed/">
+                <h3 class="media-heading">Linux_Sed</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/12/linux_awk/">
+                <h3 class="media-heading">Linux_Awk</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/12/linux_grep/">
+                <h3 class="media-heading">Linux_Grep</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/11/linux1/">
+                <h3 class="media-heading">Linux1</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%AF%B9%E6%95%B0%E6%8D%AE%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%A4%84%E7%90%86/">
+                <h3 class="media-heading">数据分析 - 对数据的基本处理</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/python-webdata/">
+                <h3 class="media-heading">Python - WebData</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/python-files/">
+                <h3 class="media-heading">Python - Files</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-python%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/">
+                <h3 class="media-heading">数据分析 python准备工作</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">python 2
+pip install ipython[notebook] pip install numpy pip install matplotlib pip install seaborn  Python3
+pip3 install numpy pip3 install matplotlib pip3 install seaborn pip3 install --upgrade pip pip3 install jupyter jupyter notebook #启动jupter import numpy as np import pandas as pd import matplotlib.pyplot as plt from pandas import Series,DataFrame import csv import json from lxml.html import parse from urlib2 import urlopen from lxml import objectify from StringIO import StringIO import requests %matplotlib inline '''启用pylab模式，可以看图形效果''' jupyter notebook %pylab inline ipython --pylab  IPython 基本  Tab 自动补齐 变量？ 查看变量通用信息 函数名？ 查看函数docstring 函数名？？ 查看函数源代码 %run xxx.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/spring-resttemplate-part2/">
+                <h3 class="media-heading">Spring RestTemplate Part2</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Example for Spring RestTemplate GET/POST/PUT/DELETE</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         64 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://hiwanglong.github.io/images/cover.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://hiwanglong.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/hiwanglong.github.io\/2019\/06\/aws-solutions-architect-associate2-data-security\/';
+          
+            this.page.identifier = '\/2019\/06\/aws-solutions-architect-associate2-data-security\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'tranquilpeak';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

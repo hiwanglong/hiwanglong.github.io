@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BigData on Stella</title>
+    <link>https://hiwanglong.github.io/tags/bigdata/</link>
+    <description>Recent content in BigData on Stella</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Mar 2018 10:37:35 +0800</lastBuildDate>
+    
+	<atom:link href="https://hiwanglong.github.io/tags/bigdata/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Introduction to BigData</title>
+      <link>https://hiwanglong.github.io/2018/03/introduction-to-bigdata/</link>
+      <pubDate>Thu, 01 Mar 2018 10:37:35 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2018/03/introduction-to-bigdata/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;Hadoop :处理大数据的开源框架
+including:
+
+&lt;ul&gt;
+&lt;li&gt;MapReduce： 处理大数据的program&lt;/li&gt;
+&lt;li&gt;HDFS： 文件系统&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

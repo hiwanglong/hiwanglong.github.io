@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Stella</title>
+    <link>https://hiwanglong.github.io/categories/</link>
+    <description>Recent content in Categories on Stella</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Dec 2019 10:57:49 +0800</lastBuildDate>
+    
+	<atom:link href="https://hiwanglong.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>category</title>
+      <link>https://hiwanglong.github.io/categories/category/</link>
+      <pubDate>Mon, 02 Dec 2019 10:57:49 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/categories/category/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>subcategory</title>
+      <link>https://hiwanglong.github.io/categories/subcategory/</link>
+      <pubDate>Mon, 02 Dec 2019 10:57:49 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/categories/subcategory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tech</title>
+      <link>https://hiwanglong.github.io/categories/tech/</link>
+      <pubDate>Sun, 13 Oct 2019 15:36:21 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/categories/tech/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spring</title>
+      <link>https://hiwanglong.github.io/categories/spring/</link>
+      <pubDate>Fri, 11 Oct 2019 14:54:46 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/categories/spring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lynda Note</title>
+      <link>https://hiwanglong.github.io/categories/lynda-note/</link>
+      <pubDate>Wed, 03 Jul 2019 17:26:59 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/categories/lynda-note/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>https://hiwanglong.github.io/categories/tools/</link>
+      <pubDate>Sat, 11 May 2019 19:20:43 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/categories/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reading</title>
+      <link>https://hiwanglong.github.io/categories/reading/</link>
+      <pubDate>Sun, 03 Dec 2017 11:34:02 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/categories/reading/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Travel</title>
+      <link>https://hiwanglong.github.io/categories/travel/</link>
+      <pubDate>Sun, 15 Oct 2017 20:46:32 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/categories/travel/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

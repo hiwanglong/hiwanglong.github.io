@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.55.5 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="Stella Wang">
+<meta name="keywords" content="PaaS">
+<meta name="description" content="
+
+
+IAM
+CloudFormation
+Elastic Beanstalk
+OpsWorks ???
+Beanstalk vs OpsWorks
+
+
+">
+
+
+<meta property="og:description" content="
+
+
+IAM
+CloudFormation
+Elastic Beanstalk
+OpsWorks ???
+Beanstalk vs OpsWorks
+
+
+">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AWS Solutions Architect Associate3 - Implementing and Troubleshooting PaaS Products">
+<meta name="twitter:title" content="AWS Solutions Architect Associate3 - Implementing and Troubleshooting PaaS Products">
+<meta property="og:url" content="https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate3-implementing-and-troubleshooting-paas-products/">
+<meta property="twitter:url" content="https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate3-implementing-and-troubleshooting-paas-products/">
+<meta property="og:site_name" content="Stella">
+<meta property="og:description" content="
+
+
+IAM
+CloudFormation
+Elastic Beanstalk
+OpsWorks ???
+Beanstalk vs OpsWorks
+
+
+">
+<meta name="twitter:description" content="
+
+
+IAM
+CloudFormation
+Elastic Beanstalk
+OpsWorks ???
+Beanstalk vs OpsWorks
+
+
+">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2019-06-30T17:58:05">
+  
+  
+    <meta property="article:modified_time" content="2019-06-30T17:58:05">
+  
+  
+  
+    
+      <meta property="article:section" content="Tech">
+    
+      <meta property="article:section" content="Lynda Note">
+    
+  
+  
+    
+      <meta property="article:tag" content="AWS">
+    
+      <meta property="article:tag" content="Solutions">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=640">
+
+
+    <title>AWS Solutions Architect Associate3 - Implementing and Troubleshooting PaaS Products</title>
+
+    <link rel="icon" href="https://hiwanglong.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate3-implementing-and-troubleshooting-paas-products/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://hiwanglong.github.io/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://hiwanglong.github.io/">Stella</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://hiwanglong.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://hiwanglong.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Stella Wang</h4>
+        
+          <h5 class="sidebar-profile-bio">桃李春风一杯酒，江湖夜雨十年灯</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      AWS Solutions Architect Associate3 - Implementing and Troubleshooting PaaS Products
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-06-30T17:58:05&#43;08:00">
+        
+  June 30, 2019
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://hiwanglong.github.io/categories/tech">Tech</a>, 
+    
+      <a class="category-link" href="https://hiwanglong.github.io/categories/lynda-note">Lynda Note</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <!-- MarkdownTOC -->
+
+<ul>
+<li><a href="#iam">IAM</a></li>
+<li><a href="#cloudformation">CloudFormation</a></li>
+<li><a href="#elastic-beanstalk">Elastic Beanstalk</a></li>
+<li><a href="#opsworks-">OpsWorks ???</a></li>
+<li><a href="#beanstalk-vs-opsworks">Beanstalk vs OpsWorks</a></li>
+</ul>
+
+<!-- /MarkdownTOC -->
+
+<p><a id="iam"></a></p>
+
+<h3 id="iam">IAM</h3>
+
+<ol>
+<li>What&rsquo;s IAM?
+
+<ul>
+<li>AAA (Authentication, Authorization and Accounting)</li>
+<li>Authentication: allows you to get in
+
+<ul>
+<li>define users, groups access to your AWS resources</li>
+</ul></li>
+<li>Authorization: what you&rsquo;re allowed to do
+
+<ul>
+<li>grant and deny permissions to objects for specific individuals, groups or roles</li>
+</ul></li>
+<li>Accounting: determine what you did
+
+<ul>
+<li>track who logs in to AWS, as well as the actions they perform</li>
+</ul></li>
+</ul></li>
+<li>Features of IAM:
+
+<ul>
+<li>Identity federation</li>
+<li>PCI DSS compliance</li>
+<li>Integrated with most AWS services</li>
+<li>Shared access</li>
+<li>Free to use</li>
+<li>Multi-factor authentication</li>
+</ul></li>
+<li>IAM Users
+
+<ul>
+<li>root account</li>
+<li>create an IAM user as regular account</li>
+</ul></li>
+<li>IAM groups
+
+<ul>
+<li>a user can belong to multiple groups
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/3/1.png" >
+  
+  
+</div>
+</li>
+</ul></li>
+<li>IAM roles
+
+<ul>
+<li>eg: allow an external contractor temporary access to perform an audit on your AWS account logs</li>
+<li>can&rsquo;t assume more than one role at a time</li>
+<li>can&rsquo;t login as a role</li>
+</ul></li>
+<li>IAM policies
+
+<ul>
+<li>Identity-based inline policies: assigned to IAM users and groups</li>
+<li>Managed policies: policy objects that may be applied to multiple resources, users and groups
+
+<ul>
+<li>AWS managed policies (curated policies)</li>
+<li>Customer managed policies (user defined)</li>
+</ul></li>
+<li>Resource-Based Policies: must be attached to resources, can&rsquo;t IAM indentity
+
+<ul>
+<li>Json format</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/3/2.png" >
+  
+  
+</div>
+</li>
+</ul></li>
+</ul></li>
+<li>IAM policy simulator
+
+<ul>
+<li>test the effect of your IAM policies, roles</li>
+<li>help determine if your acess policies are too restrictive or lax before putting your app into production</li>
+</ul></li>
+<li>IAM Best Practices
+
+<ul>
+<li>Follow the principle of &ldquo;least privilege&rdquo;</li>
+<li>Do NOT use the root user for day-to-day administration</li>
+<li>Use groups to assign permission to IAM users</li>
+<li>Create and enforce a strong password policy</li>
+<li>Make sure MFA(Multi-factor authentication) is enabled for all privileged users</li>
+<li>Use AWS managed policies wherever possible to assign permissions</li>
+</ul></li>
+</ol>
+
+<p><a id="cloudformation"></a></p>
+
+<h3 id="cloudformation">CloudFormation</h3>
+
+<ol>
+<li>What&rsquo;s AWS CloudFormation?
+
+<ul>
+<li>Management tool</li>
+<li>Helps you provision your infra resources</li>
+<li>Free to use; you only pay for the resources you deploy</li>
+<li>Template in a JSON or YAML format</li>
+<li>Version control/track changes</li>
+<li>Greate for DR</li>
+<li>Greate for mass production</li>
+</ul></li>
+<li>Sections of CloudFormation Template
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/3/3.png" >
+  
+  
+</div>
+
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/3/4.png" >
+  
+  
+</div>
+
+
+<ul>
+<li>resource section: only required</li>
+<li>format version</li>
+<li>description</li>
+<li>metadata</li>
+<li>parameters</li>
+<li>mapptings</li>
+<li>conditions</li>
+<li>transform: serverless</li>
+</ul></li>
+<li>Components of CloudFormation
+
+<ul>
+<li>Templates
+
+<ul>
+<li>declaration of AWS resources that make up a stack</li>
+<li>JSON or YAML format</li>
+</ul></li>
+<li>Engine
+
+<ul>
+<li>interpreter for the JSON or YAML template files</li>
+<li>read the input template, then create the output  resources in a stack</li>
+</ul></li>
+<li>Stack
+
+<ul>
+<li>collection of AWS resources managed as one unit</li>
+</ul></li>
+</ul></li>
+<li>Explore CloudFormation</li>
+<li>Operate a stack
+
+<ul>
+<li>depoloy</li>
+<li>update</li>
+<li>delete</li>
+</ul></li>
+</ol>
+
+<p><a id="elastic-beanstalk"></a></p>
+
+<h3 id="elastic-beanstalk">Elastic Beanstalk</h3>
+
+<ol>
+<li><p>What&rsquo;s Beanstalk?
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/3/5.png" >
+  
+  
+</div>
+</p>
+
+<ul>
+<li>help to deploy and test our apps quickly with less work</li>
+<li>an easy-to-use service for deploying and manageing web apps and services within minutes
+<br /></li>
+</ul></li>
+
+<li><p>Concepts?</p>
+
+<ul>
+<li>app:
+
+<ul>
+<li>a logical collection of Beanstalk components</li>
+<li>basically a folder containing:
+
+<ul>
+<li>app versions</li>
+<li>env</li>
+<li>env configurations</li>
+</ul></li>
+<li>app version</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/3/6.png" >
+  
+  
+</div>
+
+
+<ul>
+<li>a specific release of deployable code for an app</li>
+<li>each version is unique</li>
+<li>deploy multi versions to multi envs</li>
+<li>onp app per per env</li>
+<li>stored in Amazon S3 bucket</li>
+</ul></li>
+<li>env
+
+<ul>
+<li>an infra (a set of AWS resource) provisioned to run an app version</li>
+<li>one app version per env</li>
+</ul></li>
+<li>env tier</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/3/7.png" >
+  
+  
+</div>
+
+
+<ul>
+<li>front end: web server env
+
+<ul>
+<li>run a website, we bapp, or web API that serves HTTP requests</li>
+</ul></li>
+<li>back end: worker env
+
+<ul>
+<li>run a worker app taht processes long-running workloads based on queues</li>
+</ul></li>
+</ul></li>
+<li>env type</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/3/8.png" >
+  
+  
+</div>
+
+
+<ul>
+<li>single instance</li>
+<li>auto scaling: multi single instance</li>
+</ul></li>
+</ul></li>
+</ul></li>
+
+<li><p>Modify an app</p>
+
+<ul>
+<li>rolling updates and monitoring</li>
+</ul></li>
+
+<li><p>Troubleshoot modification</p>
+
+<ul>
+<li>by event check</li>
+</ul></li>
+
+<li><p>Managing env</p>
+
+<ul>
+<li>dashboard and configuration</li>
+<li>health and logs</li>
+<li>monitoring and alarms</li>
+<li>updates, events and actions</li>
+</ul></li>
+
+<li><p>Deployment options when new version comming</p>
+
+<ul>
+<li>all at once</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/3/9.png" >
+  
+  
+</div>
+</li>
+<li>rolling</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/3/10.png" >
+  
+  
+</div>
+</li>
+<li>rolling with and additional batch</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/3/11.png" >
+  
+  
+</div>
+</li>
+<li>immutable</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/3/12.png" >
+  
+  
+</div>
+</li>
+<li>blue/green</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/3/13.png" >
+  
+  
+</div>
+</li>
+<li>summary</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/3/14.png" >
+  
+  
+</div>
+</li>
+</ul></li>
+
+<li><p>Deploy app versions</p></li>
+
+<li><p>Advanced configuration</p></li>
+
+<li><p>Additional considerations</p></li>
+</ol>
+
+<p><a id="opsworks-"></a></p>
+
+<h3 id="opsworks">OpsWorks ???</h3>
+
+<ol>
+<li>A configuration management service that allows you to configure and manage server and apps using automation platforms like Chef or Puppet
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/3/15.png" >
+  
+  
+</div>
+
+
+<ul>
+<li>aws opsworks stacks</li>
+<li>
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/3/16.png" >
+  
+  
+</div>
+</li>
+<li>aws opsworks for puppet enterprise</li>
+<li>aws opsworks for chef automate
+
+<ul>
+<li>concetps:
+
+<ul>
+<li>cookbooks:</li>
+<li>recipes:</li>
+</ul></li>
+<li>client-server architecture</li>
+<li>setup process:
+
+<ul>
+<li>step1: setup chef server with cookbooks and recipe roles</li>
+<li>step2: install chef client on instance</li>
+<li>step3: register instnces as chef node with check server</li>
+<li>step4: assign chef node with a role</li>
+<li>step5: chef client on chef node pulls recipes from chef server based on role</li>
+<li>step6: chef client applies recipes on chef onde by executing chef run</li>
+<li>if someone manually changes configuration on the node</li>
+<li>step7: chef client pulls recipes periodically (default: 30mins)</li>
+<li>step8: chef client checks for configuration changes and reapplies recipes</li>
+<li>consistent configuration restored</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Deploy OpsWorks
+
+<ul>
+<li>Create Chef Automate server</li>
+<li>Configure Chef</li>
+<li>Add Node</li>
+<li>Remove Node</li>
+<li>Delete Chef Automate server</li>
+</ul></li>
+</ol>
+
+<p><a id="beanstalk-vs-opsworks"></a></p>
+
+<h3 id="beanstalk-vs-opsworks">Beanstalk vs OpsWorks</h3>
+
+
+
+
+<div class="figure figure nocaption fig-100" >
+  
+    <img class="fig-img" src="https://hiwanglong.github.io/images/aws/3/17.png" >
+  
+  
+</div>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://hiwanglong.github.io/tags/aws/">AWS</a>
+
+  <a class="tag tag--primary tag--small" href="https://hiwanglong.github.io/tags/solutions/">Solutions</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hiwanglong.github.io/2019/07/aws-solutions-architect-associate4-implementing-and-troubleshooting-iaas-products/" data-tooltip="AWS Solutions Architect Associate4 - Implementing and Troubleshooting IaaS Products">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hiwanglong.github.io/2019/06/java-how-to-readscanner-file/" data-tooltip="Java - How to read(scanner) file?">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate3-implementing-and-troubleshooting-paas-products/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate3-implementing-and-troubleshooting-paas-products/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate3-implementing-and-troubleshooting-paas-products/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2020 Stella Wang. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hiwanglong.github.io/2019/07/aws-solutions-architect-associate4-implementing-and-troubleshooting-iaas-products/" data-tooltip="AWS Solutions Architect Associate4 - Implementing and Troubleshooting IaaS Products">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hiwanglong.github.io/2019/06/java-how-to-readscanner-file/" data-tooltip="Java - How to read(scanner) file?">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate3-implementing-and-troubleshooting-paas-products/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate3-implementing-and-troubleshooting-paas-products/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://hiwanglong.github.io/2019/06/aws-solutions-architect-associate3-implementing-and-troubleshooting-paas-products/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhiwanglong.github.io%2F2019%2F06%2Faws-solutions-architect-associate3-implementing-and-troubleshooting-paas-products%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhiwanglong.github.io%2F2019%2F06%2Faws-solutions-architect-associate3-implementing-and-troubleshooting-paas-products%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhiwanglong.github.io%2F2019%2F06%2Faws-solutions-architect-associate3-implementing-and-troubleshooting-paas-products%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Stella Wang</h4>
+    
+      <div id="about-card-bio">桃李春风一杯酒，江湖夜雨十年灯</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        SOHO
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/12/linux_pipeline/">
+                <h3 class="media-heading">Linux_Pipeline</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/12/linux_sed/">
+                <h3 class="media-heading">Linux_Sed</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/12/linux_awk/">
+                <h3 class="media-heading">Linux_Awk</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/12/linux_grep/">
+                <h3 class="media-heading">Linux_Grep</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/11/linux1/">
+                <h3 class="media-heading">Linux1</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%AF%B9%E6%95%B0%E6%8D%AE%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%A4%84%E7%90%86/">
+                <h3 class="media-heading">数据分析 - 对数据的基本处理</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/python-webdata/">
+                <h3 class="media-heading">Python - WebData</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/python-files/">
+                <h3 class="media-heading">Python - Files</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-python%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/">
+                <h3 class="media-heading">数据分析 python准备工作</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">python 2
+pip install ipython[notebook] pip install numpy pip install matplotlib pip install seaborn  Python3
+pip3 install numpy pip3 install matplotlib pip3 install seaborn pip3 install --upgrade pip pip3 install jupyter jupyter notebook #启动jupter import numpy as np import pandas as pd import matplotlib.pyplot as plt from pandas import Series,DataFrame import csv import json from lxml.html import parse from urlib2 import urlopen from lxml import objectify from StringIO import StringIO import requests %matplotlib inline '''启用pylab模式，可以看图形效果''' jupyter notebook %pylab inline ipython --pylab  IPython 基本  Tab 自动补齐 变量？ 查看变量通用信息 函数名？ 查看函数docstring 函数名？？ 查看函数源代码 %run xxx.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/spring-resttemplate-part2/">
+                <h3 class="media-heading">Spring RestTemplate Part2</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Example for Spring RestTemplate GET/POST/PUT/DELETE</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         64 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://hiwanglong.github.io/images/cover.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://hiwanglong.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/hiwanglong.github.io\/2019\/06\/aws-solutions-architect-associate3-implementing-and-troubleshooting-paas-products\/';
+          
+            this.page.identifier = '\/2019\/06\/aws-solutions-architect-associate3-implementing-and-troubleshooting-paas-products\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'tranquilpeak';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Stella</title>
+    <link>https://hiwanglong.github.io/tags/hugo/</link>
+    <description>Recent content in Hugo on Stella</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 Sep 2017 18:14:57 +0800</lastBuildDate>
+    
+	<atom:link href="https://hiwanglong.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>用Hugo搭建博客</title>
+      <link>https://hiwanglong.github.io/2017/09/%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Sat, 16 Sep 2017 18:14:57 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2017/09/%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>&lt;!-- MarkdownTOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C&#34;&gt;准备工作&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%94%9F%E6%88%90%E7%AB%99%E7%82%B9&#34;&gt;生成站点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E9%83%A8%E7%BD%B2&#34;&gt;部署&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3&#34;&gt;参考文档&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /MarkdownTOC --&gt;
+
+&lt;p&gt;&lt;a id=&#34;%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;准备工作&#34;&gt;准备工作&lt;/h3&gt;
+
+&lt;p&gt;-1. gitHub&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

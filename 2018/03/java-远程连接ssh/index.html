@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.55.5 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="Stella Wang">
+<meta name="keywords" content="SSHClient">
+<meta name="description" content="Class Example-Java SSH Client">
+
+
+<meta property="og:description" content="Class Example-Java SSH Client">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 远程连接SSH">
+<meta name="twitter:title" content="Java 远程连接SSH">
+<meta property="og:url" content="https://hiwanglong.github.io/2018/03/java-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5ssh/">
+<meta property="twitter:url" content="https://hiwanglong.github.io/2018/03/java-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5ssh/">
+<meta property="og:site_name" content="Stella">
+<meta property="og:description" content="Class Example-Java SSH Client">
+<meta name="twitter:description" content="Class Example-Java SSH Client">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2018-03-26T18:28:28">
+  
+  
+    <meta property="article:modified_time" content="2018-03-26T18:28:28">
+  
+  
+  
+    
+      <meta property="article:section" content="Tech">
+    
+  
+  
+    
+      <meta property="article:tag" content="Java">
+    
+      <meta property="article:tag" content="Coding tips">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=640">
+
+
+    <title>Java 远程连接SSH</title>
+
+    <link rel="icon" href="https://hiwanglong.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://hiwanglong.github.io/2018/03/java-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5ssh/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://hiwanglong.github.io/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://hiwanglong.github.io/">Stella</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://hiwanglong.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://hiwanglong.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Stella Wang</h4>
+        
+          <h5 class="sidebar-profile-bio">桃李春风一杯酒，江湖夜雨十年灯</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hiwanglong.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      Java 远程连接SSH
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-03-26T18:28:28&#43;08:00">
+        
+  March 26, 2018
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://hiwanglong.github.io/categories/tech">Tech</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h3 id="class-example-java-ssh-client">Class Example-Java SSH Client</h3>
+
+<p>远程连接SSH，执行shell command</p>
+
+<pre><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.PrintStream;
+import java.rmi.UnexpectedException;
+
+import org.apache.log4j.Logger;
+import com.jcraft.jsch.Channel;
+import com.jcraft.jsch.ChannelExec;
+import com.jcraft.jsch.JSch;
+import com.jcraft.jsch.JSchException;
+import com.jcraft.jsch.Session;
+
+/**
+* create an ssh client using username, password, host/connection IP, and port
+*
+*/
+public class SSHClient {
+    private JSch jschSSH;
+    private String userName;
+    private String hostip;
+    private int intConnectionPort;
+    private String password;
+    private Session sesConnection;
+    private int timeOut;
+    private Channel channel = null;
+    private static final Logger LOG = Logger.getLogger(SSHClient.class);
+    private StringBuffer outputstream, errorstream = null;
+    private String result = null;
+    private String prvKey; // just for debug purposes.
+
+    /**
+    ** initialize SSH machine config
+    */
+    public SSHClient(String user, String passwd, String connectionIP, int port) {
+        jschSSH = new JSch();
+        userName = user;
+        password = passwd;
+        hostip = connectionIP;
+        intConnectionPort = port;
+        timeOut = 30000;
+    }
+
+    public SSHClient(String user, String connectionIP, int port, String prvKey) throws JSchException {
+        this(user, null, connectionIP, port);
+        if (prvKey == null) {
+            throw new IllegalArgumentException(&quot;prvKey must not be null&quot;);
+        }
+        jschSSH.addIdentity(prvKey);
+        this.prvKey = prvKey;
+    }
+
+    /**
+    ** Connect to the remote SSH machine
+    */
+    public void connect() throws JSchException {
+        String keyFileMessage = (prvKey == null) ? &quot;without ssh key file.&quot;
+                : String.format(&quot;using ssh key file: [%s].&quot;, this.prvKey);
+        String passwordMessage = (this.password != null) ? &quot;:&quot; + this.password : &quot;&quot;;
+        LOG.info(String.format(&quot;SSH connecting to: %s%s@%s:%d %s&quot;, userName, passwordMessage, hostip, intConnectionPort,
+                keyFileMessage));
+        sesConnection = jschSSH.getSession(userName, hostip, intConnectionPort);
+
+        if (this.prvKey == null) {
+            sesConnection.setPassword(password);
+        }
+        sesConnection.setConfig(&quot;StrictHostKeyChecking&quot;, &quot;no&quot;);
+        /**
+        * Used to / bypass the key check
+        */
+        sesConnection.connect(timeOut);
+    }
+
+    /**
+    * Execution of the command with execute channel on the remote machine
+    *
+    * @param command
+    *            Actual command that needs to get executed on terminal
+    * @return String as method result
+    * @throws JSchException
+    * @throws IOException
+    */
+    public String runCommand(String command) throws JSchException, IOException {
+        channel = sesConnection.openChannel(&quot;exec&quot;);
+        // ((ChannelExec) channel).setCommand(&quot;source /etc/bashrc&quot;);
+        ((ChannelExec) channel).setCommand(command);
+        LOG.info(&quot;Command:&quot; + command);
+        BufferedReader br = new BufferedReader(new InputStreamReader(channel.getInputStream()));
+
+        InputStream error = ((ChannelExec) channel).getErrStream();
+        channel.connect(60000);
+        outputstream = new StringBuffer();
+        String msg = null;
+        while ((msg = br.readLine()) != null) {
+            outputstream.append(msg).append(&quot;\n&quot;);
+            /**
+            * Enters this loop if command has executed successfully and stores
+            * result in output String
+            */
+        }
+        LOG.info(&quot;The output stream's length is:&quot; + outputstream.length());
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            LOG.warn(&quot;After sleep 2 second got the error message:&quot; + e.getMessage());
+        }
+        // channel.disconnect();
+        int code = channel.getExitStatus();
+        LOG.info(&quot;Channel exit status:&quot; + channel.getExitStatus());
+        LOG.debug(&quot;Output of command successful execution: &quot; + outputstream.toString());
+
+        String errormsg = null;
+        BufferedReader errorReader = new BufferedReader(new InputStreamReader(error));
+        errorstream = new StringBuffer();
+        while ((errormsg = errorReader.readLine()) != null) {
+            LOG.error(&quot;Terminal error output is: &quot; + errormsg);
+            errorstream.append(errormsg).append(&quot;\n&quot;);
+            /**
+            * Enters this loop if command has not executed successfully. Used
+            * for printing the message displayed on the terminal.
+            */
+        }
+        /*
+        * LOG.info(&quot;Terminal output is: &quot;+ String.format(
+        * &quot;OutputStream: [%s] \n ErrorStream: [%s]&quot;, outputstream.toString(),
+        * errorstream.toString())); if (channel.getExitStatus() != 0) { throw
+        * new IOException(&quot;Error code is &quot; + channel.getExitStatus()); }
+        */
+        /**
+        * Throw Channel exitstatus not 0 exception
+        */
+        channel.disconnect();
+        // return String.format(&quot;OutputStream: [%s] \n ErrorStream: [%s]&quot;,
+        // outputstream.toString(), errorstream.toString());
+        if (errorstream.length() &gt; 0) {
+            return errorstream + outputstream.toString() + &quot;ExitCode&quot; + code;
+        } else {
+            return outputstream.toString() + &quot;ExitCode&quot; + code;
+        }
+    }
+
+    /**
+    * Please be careful when use this method. This method will execute the
+    * command and disconnect immediately.So you can not get the output and the
+    * channel exitCode will always be -1
+    * 
+    * @param command
+    * @return
+    * @throws JSchException
+    */
+    public int runCommandWithoutWaitOutput(String command) throws JSchException {
+        channel = sesConnection.openChannel(&quot;exec&quot;);
+        ((ChannelExec) channel).setCommand(command);
+        LOG.info(&quot;Command:&quot; + command);
+        channel.connect(60000);
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        int code = channel.getExitStatus();
+        channel.disconnect();
+        return code;
+    }
+
+    /**
+    * Execution of the command with shell channel on the remote machine
+    *
+    * @param command
+    * @return
+    * @throws JSchException
+    * @throws IOException
+    */
+    public String runShellCommand(String command) throws JSchException, IOException {
+
+        channel = sesConnection.openChannel(&quot;shell&quot;);
+        OutputStream output = channel.getOutputStream();
+        PrintStream pstream = new PrintStream(output, true);
+
+        channel.connect();
+        InputStream input = channel.getInputStream();
+        LOG.info(&quot;SSH Shell Command:&quot; + command);
+        // Execute command.
+        pstream.println(command);
+
+        // Exit shell manually, or will be fall into endless loop.
+        pstream.println(&quot;exit&quot;);
+
+        pstream.close();
+
+        result = getCommandOutput(input, channel);
+
+        // channel.disconnect();
+        LOG.info(&quot;Channel Exit status is: &quot; + channel.getExitStatus());
+        if (channel.getExitStatus() != 0) {
+            LOG.info(&quot;Terminal output:\n&quot; + result.toString());
+            throw new UnexpectedException(&quot;Exit Status not 0. Result:\n&quot; + result);
+        }
+        channel.disconnect();
+        return result.toString();
+
+    }
+
+    /**
+    * Method getOutputStream() is used to get OutputStream data after executing
+    * the SSH command
+    *
+    * @return String outputstream if it is not null or will return null
+    */
+    public String getOutputStream() {
+        if (outputstream == null) {
+            return null;
+        } else
+            return outputstream.toString();
+    }
+
+    /**
+    * Method getErrorStream() is used to get ErrorStream data after executing
+    * the SSH command
+    *
+    * @return String errorstream if it is not null or will return null
+    */
+    public String getErrorStream() {
+        if (errorstream == null) {
+            return null;
+        } else
+            return errorstream.toString();
+    }
+
+    /**
+    * Method getShellRunOutput() is used to get shell output for data after
+    * executing the SSH command
+    *
+    * @return String result if it is not null or will return null
+    */
+    public String getShellRunOutput() {
+        if (result == null) {
+            return null;
+        } else
+            return result;
+    }
+
+    /**
+    ** Method returns channel exit status for the SSH connection
+    *
+    * @return int -2 if channel is null or channel exit status
+    */
+    public int getChannelExitStatus() {
+        LOG.info(&quot;Channel exiting...&quot;);
+        if (channel == null) {
+            return -2;
+        } else
+            /**
+            * If channel.getExitStatus() = -2 it means that the channel is
+            * still null and there is issue in the execution of SSH. If it is 0
+            * it means channel command execution is completed successfully.
+            */
+            return channel.getExitStatus();
+    }
+
+    /**
+    ** Close the SSH connection
+    */
+    public void close() {
+        sesConnection.disconnect();
+    }
+
+    /**
+    * Get Command execute output.
+    *
+    * @param input
+    * @param channel
+    * @throws IOException
+    */
+    private static String getCommandOutput(InputStream input, Channel channel) throws IOException {
+        StringBuilder result = new StringBuilder();
+        int size = 1024;
+        byte[] bte = new byte[size];
+        while (true) {
+            while (input.available() &gt; 0) {
+                int i = input.read(bte, 0, 1024);
+                if (i &lt; 0)
+                    break;
+                result.append(new String(bte, 0, i));
+            }
+            if (channel.isClosed()) {
+                if (input.available() &gt; 0) {
+                    int i = input.read(bte, 0, 1024);
+                    result.append(new String(bte, 0, i));
+                }
+                break;
+            }
+        }
+
+        return result.toString();
+    }
+
+    public void setAuthenticationKey(String kEY_FILE_PATH) {
+        // TODO Auto-generated method stub
+
+    }
+
+}
+</code></pre>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://hiwanglong.github.io/tags/java/">Java</a>
+
+  <a class="tag tag--primary tag--small" href="https://hiwanglong.github.io/tags/coding-tips/">Coding tips</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hiwanglong.github.io/2018/03/java-insert-ssl-certificate/" data-tooltip="Java Insert SSL certificate">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hiwanglong.github.io/2018/03/introduction-to-bigdata/" data-tooltip="Introduction to BigData">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://hiwanglong.github.io/2018/03/java-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5ssh/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://hiwanglong.github.io/2018/03/java-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5ssh/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://hiwanglong.github.io/2018/03/java-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5ssh/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2020 Stella Wang. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hiwanglong.github.io/2018/03/java-insert-ssl-certificate/" data-tooltip="Java Insert SSL certificate">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hiwanglong.github.io/2018/03/introduction-to-bigdata/" data-tooltip="Introduction to BigData">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://hiwanglong.github.io/2018/03/java-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5ssh/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://hiwanglong.github.io/2018/03/java-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5ssh/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://hiwanglong.github.io/2018/03/java-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5ssh/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhiwanglong.github.io%2F2018%2F03%2Fjava-%25E8%25BF%259C%25E7%25A8%258B%25E8%25BF%259E%25E6%258E%25A5ssh%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhiwanglong.github.io%2F2018%2F03%2Fjava-%25E8%25BF%259C%25E7%25A8%258B%25E8%25BF%259E%25E6%258E%25A5ssh%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhiwanglong.github.io%2F2018%2F03%2Fjava-%25E8%25BF%259C%25E7%25A8%258B%25E8%25BF%259E%25E6%258E%25A5ssh%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/62db366b5da88fe0a3eeb708e17843db?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Stella Wang</h4>
+    
+      <div id="about-card-bio">桃李春风一杯酒，江湖夜雨十年灯</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        SOHO
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/12/linux_pipeline/">
+                <h3 class="media-heading">Linux_Pipeline</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/12/linux_sed/">
+                <h3 class="media-heading">Linux_Sed</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/12/linux_awk/">
+                <h3 class="media-heading">Linux_Awk</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/12/linux_grep/">
+                <h3 class="media-heading">Linux_Grep</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/11/linux1/">
+                <h3 class="media-heading">Linux1</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%AF%B9%E6%95%B0%E6%8D%AE%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%A4%84%E7%90%86/">
+                <h3 class="media-heading">数据分析 - 对数据的基本处理</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/python-webdata/">
+                <h3 class="media-heading">Python - WebData</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/python-files/">
+                <h3 class="media-heading">Python - Files</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-python%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/">
+                <h3 class="media-heading">数据分析 python准备工作</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">python 2
+pip install ipython[notebook] pip install numpy pip install matplotlib pip install seaborn  Python3
+pip3 install numpy pip3 install matplotlib pip3 install seaborn pip3 install --upgrade pip pip3 install jupyter jupyter notebook #启动jupter import numpy as np import pandas as pd import matplotlib.pyplot as plt from pandas import Series,DataFrame import csv import json from lxml.html import parse from urlib2 import urlopen from lxml import objectify from StringIO import StringIO import requests %matplotlib inline '''启用pylab模式，可以看图形效果''' jupyter notebook %pylab inline ipython --pylab  IPython 基本  Tab 自动补齐 变量？ 查看变量通用信息 函数名？ 查看函数docstring 函数名？？ 查看函数源代码 %run xxx.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hiwanglong.github.io/2019/10/spring-resttemplate-part2/">
+                <h3 class="media-heading">Spring RestTemplate Part2</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Example for Spring RestTemplate GET/POST/PUT/DELETE</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         64 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://hiwanglong.github.io/images/cover.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://hiwanglong.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/hiwanglong.github.io\/2018\/03\/java-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5ssh\/';
+          
+            this.page.identifier = '\/2018\/03\/java-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5ssh\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'tranquilpeak';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Stella</title>
+    <link>https://hiwanglong.github.io/tags/docker/</link>
+    <description>Recent content in Docker on Stella</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 Apr 2019 15:53:18 +0800</lastBuildDate>
+    
+	<atom:link href="https://hiwanglong.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Learning Docker</title>
+      <link>https://hiwanglong.github.io/2019/04/learning-docker/</link>
+      <pubDate>Mon, 29 Apr 2019 15:53:18 +0800</pubDate>
+      
+      <guid>https://hiwanglong.github.io/2019/04/learning-docker/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.docker.com/&#34;&gt;https://www.docker.com/&lt;/a&gt; &lt;br&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
